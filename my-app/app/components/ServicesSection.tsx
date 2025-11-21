@@ -4,50 +4,40 @@ export default function ServicesSection() {
   return (
     <section id="services" className="services-section">
       <div className="container">
-        <div className="section-header">
-          <span className="section-tag">Services</span>
-          <h2 className="section-title">제공 서비스</h2>
+        {/* 데스크톱 제목 */}
+        <div className="section-title services-title desktop">
+          온라인 판매자가 필요한 <br /> 서비스를 제공합니다
         </div>
-        <div className="services-grid">
-          <div className="service-item">
-            <div className="service-image">
-              <div className="service-overlay">
-                <h3>풀필먼트 서비스</h3>
-                <p>입고부터 배송까지 모든 과정을 관리합니다</p>
-                <a href="#" className="service-link">자세히 보기 →</a>
-              </div>
+
+        {/* 모바일 제목 */}
+        <div className="section-title services-title mobile">
+          판매자가 필요한<br />서비스를 제공합니다
+        </div>
+
+        {/* 풀필먼트 서비스 카드 */}
+        <div className="fulfilment-card">
+          <div className="fulfilment-text">
+            <div className="service-logo">
+              <span className="logo-text">FASSTO</span>
             </div>
+            <div className="service-subtitle">주문이 자동으로 배송되는</div>
+            <div className="service-main-title">파스토 풀필먼트</div>
+            <a className="service-link-btn" href="https://www.fassto.ai/" target="_blank" rel="noopener noreferrer">
+              <span>바로가기</span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
           </div>
-          <div className="service-item">
-            <div className="service-image">
-              <div className="service-overlay">
-                <h3>재고 관리</h3>
-                <p>AI 기반 재고 최적화 솔루션을 제공합니다</p>
-                <a href="#" className="service-link">자세히 보기 →</a>
-              </div>
-            </div>
-          </div>
-          <div className="service-item">
-            <div className="service-image">
-              <div className="service-overlay">
-                <h3>배송 관리</h3>
-                <p>최적 배송 루트로 비용을 절감합니다</p>
-                <a href="#" className="service-link">자세히 보기 →</a>
-              </div>
-            </div>
-          </div>
-          <div className="service-item">
-            <div className="service-image">
-              <div className="service-overlay">
-                <h3>데이터 분석</h3>
-                <p>빅데이터 분석으로 인사이트를 제공합니다</p>
-                <a href="#" className="service-link">자세히 보기 →</a>
-              </div>
-            </div>
+          <div className="fulfilment-image">
+            <img 
+              src="/images/AIPredicted.png" 
+              alt="Fassto Fulfillment" 
+              className="service-img"
+            />
           </div>
         </div>
       </div>
     </section>
   );
 }
-

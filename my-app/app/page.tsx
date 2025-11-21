@@ -1,24 +1,39 @@
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
+import CustomerSection from './components/CustomerSection';
 import ServicesSection from './components/ServicesSection';
 import SolutionsSection from './components/SolutionsSection';
 import StatsSection from './components/StatsSection';
 import CareersSection from './components/CareersSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-
+import TeamSection from './components/TeamSection';
+import PartnerSection from './components/PartnerSection';
+import ESGSection from './components/ESGSection';
+import NewsSection from './components/NewsSection';
+import HistorySection from './components/HistorySection';
+import ECOPostSection from './components/ECOPostSection';
+import LocationSection from './components/LocationSection';
 export default function Home() {
   return (
     <>
       <Navbar />
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
-      <SolutionsSection />
+      <CustomerSection />
+      
+      {/* <SolutionsSection /> */}
       <StatsSection />
-      <CareersSection />
-      <ContactSection />
+      <ServicesSection />
+      {/* <ContactSection /> */}
+      <TeamSection/>
+      <PartnerSection />
+      <ESGSection/>
+      <NewsSection />
+      <HistorySection />
+      <ECOPostSection />
+      <LocationSection />
       <Footer />
     </>
   );

@@ -4,7 +4,50 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function StatsSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const [animatedValues, setAnimatedValues] = useState<{ [key: number]: string }>({});
   const sectionRef = useRef<HTMLElement>(null);
+
+  const stats = [
+    { label: '가입 회원 수', value: '1,028', unit: '%', growth: true },
+    { label: '계약 고객 수', value: '1,256', unit: '%', growth: true },
+    { label: '스마트스토어 출고량', value: '13,067', unit: '%', growth: true },
+    { label: '스마트스토어 취급 상품 수', value: '25,025', unit: '%', growth: true }
+  ];
+
+  // 숫자 카운팅 애니메이션 함수 (자릿수 유지)
+  const animateNumber = (index: number, targetValue: string) => {
+    const numericValue = parseInt(targetValue.replace(/,/g, ''));
+    const targetLength = targetValue.replace(/,/g, '').length; // 자릿수 확인
+    const duration = 500; // 0.5초
+    const steps = 15; // 빠른 변화를 위한 단계 수
+    let currentStep = 0;
+
+    const timer = setInterval(() => {
+      currentStep++;
+      
+      // 랜덤 숫자 생성 (자릿수 유지)
+      let randomNum = '';
+      for (let i = 0; i < targetLength; i++) {
+        randomNum += Math.floor(Math.random() * 10);
+      }
+      
+      // 마지막 단계에서는 실제 값 표시
+      if (currentStep >= steps) {
+        clearInterval(timer);
+        setAnimatedValues(prev => ({
+          ...prev,
+          [index]: targetValue
+        }));
+      } else {
+        // 랜덤 숫자를 콤마 형식으로 변환
+        const formattedRandom = parseInt(randomNum).toLocaleString();
+        setAnimatedValues(prev => ({
+          ...prev,
+          [index]: formattedRandom
+        }));
+      }
+    }, duration / steps);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -13,35 +56,16 @@ export default function StatsSection() {
           if (entry.isIntersecting && !isVisible) {
             setIsVisible(true);
             
-            // 숫자 카운팅 애니메이션
-            const statNumbers = entry.target.querySelectorAll('.stat-number');
-            statNumbers.forEach((stat) => {
-              const finalValue = stat.textContent || '';
-              const suffix = finalValue.replace(/[0-9]/g, '');
-              const numericValue = parseInt(finalValue.replace(/[^0-9]/g, ''));
-              
-              if (!isNaN(numericValue)) {
-                let startTimestamp: number | null = null;
-                const duration = 2000;
-                
-                const step = (timestamp: number) => {
-                  if (!startTimestamp) startTimestamp = timestamp;
-                  const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                  const value = Math.floor(progress * numericValue);
-                  stat.textContent = value + suffix;
-                  if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                  }
-                };
-                
-                stat.textContent = '0' + suffix;
-                window.requestAnimationFrame(step);
-              }
+            // 각 통계에 대해 숫자 카운팅 애니메이션 시작
+            stats.forEach((stat, index) => {
+              setTimeout(() => {
+                animateNumber(index, stat.value);
+              }, index * 100); // 순차적으로 시작
             });
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) {
@@ -54,26 +78,64 @@ export default function StatsSection() {
   return (
     <section className="stats-section" ref={sectionRef}>
       <div className="container">
-        <div className="stats-grid">
-          <div className="stat-item">
-            <div className="stat-number">99.9%</div>
-            <div className="stat-label">정확도</div>
+        <div className={`section-title stats-title ${isVisible ? 'fade-in-active' : ''}`}>
+          고객과 함께 성장하며 <br /> 유의미한 변화를 만듭니다
+        </div>
+
+        <div className="stats-layout">
+          {/* 왼쪽: 통계 리스트 */}
+          <div className="stats-left">
+            <div className="stats-list">
+              {stats.map((stat, index) => (
+                <div 
+                  key={index} 
+                  className={`stat-item ${isVisible ? 'fade-in-active' : ''}`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="stat-label">{stat.label}</div>
+                  <div className="stat-value-container">
+                    <div className="stat-value">
+                      {animatedValues[index] || '0'}
+                    </div>
+                    <div className="stat-unit">{stat.unit}</div>
+                    {stat.growth && (
+                      <div className={`growth-arrow ${isVisible ? 'arrow-bounce' : ''}`}>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <defs>
+                            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" style={{ stopColor: '#60a5fa', stopOpacity: 1 }} />
+                              <stop offset="100%" style={{ stopColor: '#3b82f6', stopOpacity: 1 }} />
+                            </linearGradient>
+                          </defs>
+                          <path 
+                            d="M12 4L12 20M12 4L6 10M12 4L18 10" 
+                            stroke="url(#blueGradient)" 
+                            strokeWidth="3" 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className={`stats-note ${isVisible ? 'fade-in-active' : ''}`}>
+              2019년 ~ 2021년 기준 증가률
+            </div>
           </div>
-          <div className="stat-item">
-            <div className="stat-number">1M+</div>
-            <div className="stat-label">일일 처리량</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">500+</div>
-            <div className="stat-label">파트너사</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">24/7</div>
-            <div className="stat-label">고객 지원</div>
+
+          {/* 오른쪽: 그래프 이미지 */}
+          <div className={`stats-right ${isVisible ? 'fade-in-active' : ''}`}>
+            <img 
+              src="/images/graph2.png" 
+              alt="Growth Graph" 
+              className="stats-graph"
+            />
           </div>
         </div>
       </div>
     </section>
   );
 }
-

@@ -36,10 +36,10 @@ export default function TeamSection() {
       <div className="container">
         {/* 데스크톱 설명 */}
         <div className="section-title team-title">
-          변화를 만드는 파스토 팀
+          변화를 만드는 명성
         </div>
         <div className="section-description team-description desktop">
-          파스토는 충분한 권한과 자율성을 가지고 일하며,<br />
+          명성은 충분한 권한과 자율성을 가지고 일하며,<br />
           다양성에 기초한 상호 존중을 바탕으로 건강한 조직문화를 만들어 갑니다.
         </div>
 

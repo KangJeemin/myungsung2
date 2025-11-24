@@ -124,6 +124,68 @@ body {
     width: 100%;
 }
 
+.language-selector {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.language-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.language-icon-wrapper svg {
+    transition: all 0.3s ease;
+}
+
+.language-icon-wrapper:hover svg {
+    opacity: 0.8;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    min-width: 120px;
+    animation: fadeInDown 0.3s ease;
+}
+
+.language-option {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: white;
+    color: var(--text-primary);
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.language-option:hover {
+    background: var(--light-bg);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -211,7 +273,7 @@ body {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 800;
     color: var(--white);
     margin-bottom: 1.5rem;
@@ -222,6 +284,7 @@ body {
     display: block;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
+    margin-bottom: 1rem;
 }
 
 .hero-subtitle {
@@ -240,6 +303,25 @@ body {
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
 }
+.hero-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    z-index: 2;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(20px);
+    }
+  }
 
 .btn {
     padding: 1rem 2rem;
@@ -1004,7 +1086,7 @@ body {
 }
 
 .customer-item-title {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 1rem;
@@ -1391,7 +1473,7 @@ body {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero-subtitle {
@@ -1425,7 +1507,7 @@ body {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .hero-cta {
@@ -2553,5 +2635,57 @@ body {
     .download-link {
         padding: 0.75rem 1.2rem;
         font-size: 0.9rem;
+    }
+}
+
+/* 맨 위로 가기 버튼 */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.scroll-to-top:active {
+    transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 45px;
+        height: 45px;
     }
 }

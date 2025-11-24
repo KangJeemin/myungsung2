@@ -30,9 +30,25 @@ export default function HeroSection() {
 
       <div className="hero-content">
         <h1 className="hero-title">
-          <span className="fade-in">현장을 가장 잘 아는 AI 스마트 팩토리 파트너.</span>
-          <span className="fade-in delay-1">From Control To Intelligence</span>
+          <span className="fade-in">데이터로 설비를 읽고</span>
+          <span className="fade-in delay-1">AI로 미래를 예측하다</span>
         </h1>
+      </div>
+
+      {/* 아래 방향 화살표 아이콘 */}
+      <div className="hero-arrow">
+        <svg 
+          width="40" 
+          height="40" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="2" 
+          strokeLinecap="round" 
+          strokeLinejoin="round"
+        >
+          <path d="M7 10l5 5 5-5"/>
+        </svg>
       </div>
       
     </section>

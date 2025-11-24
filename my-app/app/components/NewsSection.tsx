@@ -29,16 +29,16 @@ export default function NewsSection() {
 
   const newsItems = [
     {
-      image: 'https://cdn.fassto.ai/resources/imagesAbout/news/seriesC950_x2.jpg',
-      title: 'AI물류 플랫폼 기업 \'파스토\', 총950억\n시리즈C 투자유치 완료',
-      description: 'AI 물류 플랫폼 기업 파스토(FASSTO)가 지난 4월 SK디앤디, 신한벤처투자, 산업은행, VIG파트너스, 하나벤처스의 800억원 투자에 이어 유안타인 ...',
-      link: 'https://marketinsight.hankyung.com/article/202208195130r'
+      image: 'https://www.hellot.net/data/photos/20230311/art_1678669057602_2257f2.jpg',
+      title: '[AW 2023] 명성에이앤티, 멀티 통신모듈·스마트 센서 등 스마트 팩토리 솔루션 공개',
+      description: '명성에이앤티가 ‘스마트공장·자동화산업전 2023(Smart Factory+Automation World 2023, 이하 AW 2023)’에 참가해 스마트 팩토리 분야 통신·감시제어...',
+      link: 'https://www.hellot.net/mobile/article.html?no=76118'
     },
     {
-      image: 'https://cdn.fassto.ai/resources/imagesAbout/news/Yongin2center_x2.jpeg',
-      title: '파스토, 스마트물류센터 1등급 인증\n용인2센터 오픈',
-      description: '스마트물류센터 스타트업 파스토는 지난해 오픈한 용인1센터에 이어서 용인2센터 운영에 나선다고 5일 밝혔다. 용인2센터는 연면적 약 4만...',
-      link: 'https://biz.chosun.com/industry/company/2022/08/05/XY7FPSLZMZCHTM47KCZA3NVXBI/?utm_source=naver&utm_medium=original&utm_campaign=biz'
+      image: 'https://file.newswire.co.kr/data/datafile2/data/2021/08/1891285381_20210803151110_8979351252.jpg',
+      title: '충북 IT 중소기업 명성에이앤티, 충북과학기술혁신원 지원으로 우수 사업 성과 달성',
+      description: '지난해 충청북도와 충북과학기술혁신원(원장 노근호, 융합본부장 정재욱)은 도내 기업의 4차 산업혁명 선제 대응...',
+      link: 'https://www.newswire.co.kr/newsRead.php?no=928145'
     }
   ];
 
@@ -51,7 +51,7 @@ export default function NewsSection() {
     >
       <div className="container">
         <div className="section-title news-title">
-          파스토의 새로운 소식
+          명성의 새로운 소식
         </div>
 
         <div className="news-list">

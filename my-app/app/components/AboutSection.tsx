@@ -33,9 +33,10 @@ export default function AboutSection() {
     <section id="about" className="about-section" ref={sectionRef}>
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">우리는 물류의 미래를 만듭니다</h2>
+          <h2 className="section-title">현장을 가장 잘 아는 AI 스마트 팩토리 파트너.
+          </h2>
           <p className="section-description">
-            혁신적인 AI 기술과 데이터 분석을 통해 물류 프로세스를 최적화하고,
+            혁신적인 AI 기술과 데이터 분석을 통해 자동제어를 최적화하고,
             고객에게 최고의 서비스를 제공합니다.
           </p>
         </div>

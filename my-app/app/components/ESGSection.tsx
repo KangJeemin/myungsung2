@@ -102,7 +102,7 @@ export default function ESGSection() {
     >
       <div className="container">
         <div className="section-title esg-title">
-          파스토 ESG 경영
+          명성 ESG 경영
         </div>
 
         <div className="esg-list">

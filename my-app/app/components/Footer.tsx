@@ -1,6 +1,8 @@
 'use client';
 
 export default function Footer() {
+  const companyWebsiteUrl = process.env.NEXT_PUBLIC_COMPANY_WEBSITE_URL || 'https://www.fassto.ai/';
+  
   return (
     <footer className="footer" id="footer">
       <div className="footer-nav">
@@ -11,7 +13,7 @@ export default function Footer() {
           <div className="homePageLink">
             <div className="item item01">
               <div className="title">새로운 물류의 시작</div>
-              <a href="https://www.fassto.ai/" target="_blank" rel="noopener noreferrer">
+              <a href={companyWebsiteUrl} target="_blank" rel="noopener noreferrer">
                 <span className="icon-logo-fassto"></span>
               </a>
             </div>
@@ -77,7 +79,7 @@ export default function Footer() {
           <div className="homePageLink mobile">
             <div className="item item01">
               <div className="title">새로운 물류의 시작</div>
-              <a href="https://www.fassto.ai/" target="_blank" rel="noopener noreferrer">
+              <a href={companyWebsiteUrl} target="_blank" rel="noopener noreferrer">
                 <span className="icon-logo-fassto"></span>
               </a>
             </div>

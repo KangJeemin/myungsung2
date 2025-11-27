@@ -15,7 +15,7 @@ import NewsSection from './components/NewsSection';
 import HistorySection from './components/HistorySection';
 import ECOPostSection from './components/ECOPostSection';
 import LocationSection from './components/LocationSection';
-import ScrollToTop from './components/ScrollToTop';
+import FloatingActions from './components/FloatingActions';
 export default function Home() {
   return (
     <>
@@ -35,8 +35,9 @@ export default function Home() {
       <HistorySection />
       <ECOPostSection />
       <LocationSection />
+      <ContactSection />
       <Footer />
-      <ScrollToTop />
+      <FloatingActions />
     </>
   );
 }

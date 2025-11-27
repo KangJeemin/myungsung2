@@ -1,33 +1,61 @@
 'use client';
 
+import { useLanguage } from '../contexts/LanguageContext';
+import { useEffect, useRef, useState } from 'react';
+
 export default function Customer() {
+  const { t } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+  
   const items = [
     {
-      title: '고객 감동',
-      description: '고객이 원하는 서비스를 제공하는 것은 물론이고,\n기대하지 못한 감동까지 주고자 노력합니다.'
+      title: t('customer.item1.title'),
+      description: t('customer.item1.description')
     },
     {
-      title: '혁신',
-      description: 'AI, 물류자동화 등의 최신 기술을 활용해서\n데이터 기반으로 오류 없는 정확한 서비스를 구현합니다.'
+      title: t('customer.item2.title'),
+      description: t('customer.item2.description')
     },
     {
-      title: '신속',
-      description: '더욱 빠르고 정확한 서비스를 구현하기 위해\n데이터 연동을 통한 원스톱 풀필먼트 서비스를 제공합니다.'
+      title: t('customer.item3.title'),
+      description: t('customer.item3.description')
     },
     {
-      title: '상생',
-      description: '고객사, 협력사와 협력체계 및 경쟁력을 강화하고\n동반성장을 위한 상생경영 생태계 조성에 힘쓰고 있습니다.'
+      title: t('customer.item4.title'),
+      description: t('customer.item4.description')
     }
   ];
 
   return (
-    <section id="customer" className="customer-section">
+    <section id="customer" className={`customer-section ${isVisible ? 'visible' : ''}`} ref={sectionRef}>
       <div className="container">
         <div className="customer-layout">
           {/* 왼쪽: 타이틀 */}
           <div className="customer-left">
             <div className="section-title customer-title">
-              고객 만족을 최우선의 <br /> 가치로 생각합니다
+              {t('customer.title')}
             </div>
           </div>
 
@@ -44,12 +72,7 @@ export default function Customer() {
                     {item.title}
                   </dt>
                   <dd className="customer-item-description">
-                    {item.description.split('\n').map((line, i) => (
-                      <span key={i}>
-                        {line}
-                        {i < item.description.split('\n').length - 1 && <br />}
-                      </span>
-                    ))}
+                    {item.description}
                   </dd>
                 </div>
               ))}

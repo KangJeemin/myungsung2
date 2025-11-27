@@ -1,6 +1,9 @@
 'use client';
 
+import { useLanguage } from '../contexts/LanguageContext';
+
 export default function HeroSection() {
+  const { t } = useLanguage();
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.querySelector(id);
@@ -30,8 +33,8 @@ export default function HeroSection() {
 
       <div className="hero-content">
         <h1 className="hero-title">
-          <span className="fade-in">데이터로 설비를 읽고</span>
-          <span className="fade-in delay-1">AI로 미래를 예측하다</span>
+          <span className="fade-in">{t('hero.title1')}</span>
+          <span className="fade-in delay-1">{t('hero.title2')}</span>
         </h1>
       </div>
 

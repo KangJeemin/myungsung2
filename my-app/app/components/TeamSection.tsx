@@ -1,8 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function TeamSection() {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -36,18 +38,15 @@ export default function TeamSection() {
       <div className="container">
         {/* 데스크톱 설명 */}
         <div className="section-title team-title">
-          변화를 만드는 명성
+          {t('team.title')}
         </div>
         <div className="section-description team-description desktop">
-          명성은 충분한 권한과 자율성을 가지고 일하며,<br />
-          다양성에 기초한 상호 존중을 바탕으로 건강한 조직문화를 만들어 갑니다.
+          {t('team.description')}
         </div>
 
         {/* 모바일 설명 */}
         <div className="section-description team-description mobile">
-          파스토는 충분한 권한과 자율성을 가지고 일하며,<br />
-          다양성에 기초한 상호 존중을 바탕으로 건강한<br />
-          조직문화를 만들어 갑니다.
+          {t('team.description')}
         </div>
 
         {/* 이미지 박스 */}

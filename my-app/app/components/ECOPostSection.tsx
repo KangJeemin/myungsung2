@@ -36,13 +36,13 @@ export default function ECOPostSection() {
       <div className="container">
         <div className="eco-post-wrap">
           <div className="eco-post-title">
-            파스토는<br />
-            지속 가능한 물류를 위해<br />
+            명성은<br />
+            탄소발자국을 줄이고 지속가능한 생산을 실천하기 위해<br />
             ESG 경영을 실천합니다
           </div>
           <a 
             className="eco-post-link" 
-            href="https://about.fassto.ai/content/page/grewCampaign" 
+            href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.newspenguin.com%2Fnews%2FarticleView.html%3Fidxno%3D17949&psig=AOvVaw3NPR1suUEhqEHyViaSEGLX&ust=1764211066430000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCIiZg8PkjpEDFQAAAAAdAAAAABAv" 
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -56,5 +56,6 @@ export default function ECOPostSection() {
     </section>
   );
 }
+
 
 

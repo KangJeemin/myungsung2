@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "FASSTO - 스마트 물류 솔루션",
-  description: "AI 기술로 물류 산업의 혁신을 이끌어갑니다",
+  title: "MYUNGSUNG - 자동화의 시작",
+  description: "AI 기술로 자동화 산업의 혁신을 이끌어갑니다",
 };
 
 export default function RootLayout({
@@ -13,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

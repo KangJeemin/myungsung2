@@ -1,8 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function LocationSection() {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -37,7 +39,7 @@ export default function LocationSection() {
         <div className="location-layout">
           {/* 왼쪽: 본사 정보 */}
           <div className="location-left">
-            <div className="section-title location-title">본사 정보</div>
+            <div className="section-title location-title">{t('location.title')}</div>
             
            
           </div>
@@ -45,8 +47,8 @@ export default function LocationSection() {
           {/* 오른쪽: 찾아오시는 길 + 지도 */}
           <div className="location-right">
             <div className="address-section">
-              <div className="address-label">찾아오시는 길</div>
-              <div className="address-text">충청북도 청주시 오창읍 장대길 13-16 (장대리 336, 오창성당 옆)</div>
+              <div className="address-label">{t('location.findUs')}</div>
+              <div className="address-text">{t('location.address')}</div>
             </div>
 
             {/* 지도 */}

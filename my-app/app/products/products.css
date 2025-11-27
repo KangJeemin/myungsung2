@@ -1,0 +1,295 @@
+/* Products 페이지 */
+.products-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.products-main {
+    flex: 1;
+    padding-top: 80px;
+}
+
+/* Products Hero */
+.products-hero {
+    padding: 6rem 0 4rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    margin-top: -80px;
+    padding-top: calc(6rem + 80px);
+}
+
+.products-hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.products-hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Products Tabs */
+.products-tabs-section {
+    background: var(--white);
+    padding: 2rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+}
+
+.products-tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-tab {
+    padding: 1rem 2rem;
+    border: 2px solid #e0e0e0;
+    background: var(--white);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-tab:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.product-tab.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Product Detail */
+.product-detail-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+/* Product Overview */
+.product-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.product-overview-content {
+    max-width: 600px;
+}
+
+.product-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--accent-color);
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.product-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.product-description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.product-overview-image {
+    width: 100%;
+    height: 500px;
+    background: var(--light-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-overview-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Product Features */
+.product-features {
+    margin-bottom: 6rem;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--light-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.feature-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Product Specs */
+.product-specs {
+    margin-bottom: 4rem;
+}
+
+.specs-table {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--light-bg);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.spec-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.spec-value {
+    color: var(--text-secondary);
+}
+
+/* Product CTA */
+.product-cta {
+    text-align: center;
+}
+
+.btn-large {
+    padding: 1.25rem 3rem;
+    font-size: 1.125rem;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+    .products-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .product-overview {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .product-title {
+        font-size: 2.5rem;
+    }
+
+    .product-overview-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-hero {
+        padding: 4rem 0 3rem;
+    }
+
+    .products-hero-title {
+        font-size: 2rem;
+    }
+
+    .products-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .products-tabs {
+        gap: 0.5rem;
+    }
+
+    .product-tab {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .product-title {
+        font-size: 2rem;
+    }
+
+    .product-description {
+        font-size: 1rem;
+    }
+
+    .product-overview-image {
+        height: 300px;
+        padding: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spec-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}
+

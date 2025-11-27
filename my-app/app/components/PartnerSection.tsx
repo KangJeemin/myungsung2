@@ -1,8 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function PartnerSection() {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -27,36 +29,27 @@ export default function PartnerSection() {
     };
   }, []);
 
-  // 상단 슬라이더 로고 (12개)
+  // 파트너 로고 리스트
   const topLogos = [
-    { src: '/images/logos/hyundai.png', alt: '현대' },
     { src: '/images/logos/samsung.png', alt: '삼성' },
-    { src: '/images/logos/lg.png', alt: 'LG' },
-    { src: '/images/logos/sk.png', alt: 'SK' },
+    { src: '/images/logos/LG_Chemical.png', alt: 'LG화학' },
+    { src: '/images/logos/lg_display_logo_1424x277.png', alt: 'LG디스플레이' },
+    { src: '/images/logos/LG_Energy_Solution.png', alt: 'LG에너지솔루션' },
+    { src: '/images/logos/SK_innovation.png', alt: 'SK이노베이션' },
     { src: '/images/logos/posco.png', alt: 'POSCO' },
-    { src: '/images/logos/hanwha.png', alt: '한화' },
-    { src: '/images/logos/ls.png', alt: 'LS ELECTRIC' },
-    { src: '/images/logos/ecopro.png', alt: 'ECOPRO' },
-    { src: '/images/logos/shinsung.png', alt: 'SHINSUNG E&G' },
-    { src: '/images/logos/sungdo.png', alt: 'SUNGDO ENG' },
-    { src: '/images/logos/toray.png', alt: 'TORAY' },
-    { src: '/images/logos/hanwha-techwin.png', alt: 'Hanwha Techwin' },
-  ];
-
-  // 하단 슬라이더 로고 (반대 방향)
-  const bottomLogos = [
-    { src: '/images/logos/samsung.png', alt: '삼성' },
-    { src: '/images/logos/lg.png', alt: 'LG' },
-    { src: '/images/logos/posco.png', alt: 'POSCO' },
-    { src: '/images/logos/sk.png', alt: 'SK' },
-    { src: '/images/logos/ls.png', alt: 'LS ELECTRIC' },
-    { src: '/images/logos/hanwha.png', alt: '한화' },
-    { src: '/images/logos/ecopro.png', alt: 'ECOPRO' },
-    { src: '/images/logos/hyundai.png', alt: '현대' },
-    { src: '/images/logos/shinsung.png', alt: 'SHINSUNG E&G' },
-    { src: '/images/logos/sungdo.png', alt: 'SUNGDO ENG' },
-    { src: '/images/logos/toray.png', alt: 'TORAY' },
-    { src: '/images/logos/hanwha-techwin.png', alt: 'Hanwha Techwin' },
+    { src: '/images/logos/hyundai_LNC.png', alt: '현대' },
+    { src: '/images/logos/hanwha_Solution.jpg', alt: '한화솔루션' },
+    { src: '/images/logos/hanwha-techwin.png', alt: '한화테크윈' },
+    { src: '/images/logos/LS_ELECTRIC.png.png', alt: 'LS ELECTRIC' },
+    { src: '/images/logos/ecopro_logo.png', alt: '에코프로' },
+    { src: '/images/logos/shinsung.png', alt: '신성이앤지' },
+    { src: '/images/logos/sungdo.png', alt: '성도이엔지' },
+    { src: '/images/logos/TORAY.png', alt: '도레이' },
+    { src: '/images/logos/DOW.png', alt: 'DOW' },
+    { src: '/images/logos/SAMYANG.jpg', alt: '삼양' },
+    { src: '/images/logos/enchem.png', alt: '엔켐' },
+    { src: '/images/logos/jogwang.webp', alt: '조광' },
+    { src: '/images/logos/DEVICE.png', alt: 'DEVICE' },
   ];
 
   return (
@@ -67,7 +60,7 @@ export default function PartnerSection() {
     >
       <div className="container">
         <div className="section-title partners-title">
-          보기만 해도 든든한 파트너
+          {t('partners.title')}
         </div>
 
         {/* PC 버전 - 슬라이더 */}
@@ -97,7 +90,7 @@ export default function PartnerSection() {
 
         {/* 모바일 버전 - 그리드 */}
         <div className="partners-grid mobile">
-          {topLogos.slice(0, 12).map((logo, index) => (
+          {topLogos.map((logo, index) => (
             <div key={`mobile-${index}`} className="partner-item-mobile">
               <img src={logo.src} alt={logo.alt} />
             </div>

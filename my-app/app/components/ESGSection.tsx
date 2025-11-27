@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // ESG 아이콘 컴포넌트들
 const EnvironmentIcon = () => (
@@ -36,6 +37,7 @@ const GovernanceIcon = () => (
 );
 
 export default function ESGSection() {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -63,33 +65,33 @@ export default function ESGSection() {
   const esgItems = [
     {
       icon: <EnvironmentIcon />,
-      title: '환경과 자연을\n생각합니다',
+      title: t('esg.environment.title'),
       items: [
-        'FSC 인증 박스 사용',
-        '친환경 포장재 출고 패키지 운영',
-        '친환경적인 센터 폐기물 관리',
-        '숲 조성 활동 \'그루\' 캠페인 진행',
-        '저전력 자동화설비 운용'
+        t('esg.environment.item1'),
+        t('esg.environment.item2'),
+        t('esg.environment.item3'),
+        t('esg.environment.item4'),
+        t('esg.environment.item5')
       ]
     },
     {
       icon: <SocialIcon />,
-      title: '사회에 도움이 되기\n위해 노력합니다',
+      title: t('esg.social.title'),
       items: [
-        '소상공인을 위한 투명한 표준 요금제 운영',
-        '균등한 성장의 기회(PO제 운영)',
-        '수평적인 조직 소통 문화',
-        '사내 노무사가 관여하는 공정한 고용 및 노사관계'
+        t('esg.social.item1'),
+        t('esg.social.item2'),
+        t('esg.social.item3'),
+        t('esg.social.item4')
       ]
     },
     {
       icon: <GovernanceIcon />,
-      title: '모두를 위해\n올바르게 생각합니다',
+      title: t('esg.governance.title'),
       items: [
-        '지속가능한 기업 지배구조',
-        '윤리경영 교육 및 실행',
-        '고객사 및 협력사 상생경영',
-        '통합 리스크 관리'
+        t('esg.governance.item1'),
+        t('esg.governance.item2'),
+        t('esg.governance.item3'),
+        t('esg.governance.item4')
       ]
     }
   ];
@@ -102,7 +104,7 @@ export default function ESGSection() {
     >
       <div className="container">
         <div className="section-title esg-title">
-          명성 ESG 경영
+          {t('esg.title')}
         </div>
 
         <div className="esg-list">
@@ -117,23 +119,13 @@ export default function ESGSection() {
                   {item.icon}
                 </div>
                 <div className="esg-item-title">
-                  {item.title.split('\n').map((line, i) => (
-                    <span key={i}>
-                      {line}
-                      {i < item.title.split('\n').length - 1 && <br />}
-                    </span>
-                  ))}
+                  {item.title}
                 </div>
                 <div className="esg-text-box">
                   {item.items.map((text, textIndex) => (
                     <div key={textIndex} className="esg-text">
                       <div className="esg-circle"></div>
-                      {text.split('\n').map((line, i) => (
-                        <span key={i}>
-                          {line}
-                          {i < text.split('\n').length - 1 && <br />}
-                        </span>
-                      ))}
+                      {text}
                     </div>
                   ))}
                 </div>

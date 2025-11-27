@@ -1,17 +1,19 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function StatsSection() {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const [animatedValues, setAnimatedValues] = useState<{ [key: number]: string }>({});
   const sectionRef = useRef<HTMLElement>(null);
 
   const stats = [
-    { label: '가입 회원 수', value: '1,028', unit: '%', growth: true },
-    { label: '계약 고객 수', value: '1,256', unit: '%', growth: true },
-    { label: '스마트스토어 출고량', value: '13,067', unit: '%', growth: true },
-    { label: '스마트스토어 취급 상품 수', value: '25,025', unit: '%', growth: true }
+    { label: t('stats.stat1'), value: '1,028', unit: '%', growth: true },
+    { label: t('stats.stat2'), value: '1,256', unit: '%', growth: true },
+    { label: t('stats.stat3'), value: '13,067', unit: '%', growth: true },
+    { label: t('stats.stat4'), value: '25,025', unit: '%', growth: true }
   ];
 
   // 숫자 카운팅 애니메이션 함수 (자릿수 유지)
@@ -79,7 +81,7 @@ export default function StatsSection() {
     <section className="stats-section" ref={sectionRef}>
       <div className="container">
         <div className={`section-title stats-title ${isVisible ? 'fade-in-active' : ''}`}>
-          고객과 함께 성장하며 <br /> 유의미한 변화를 만듭니다
+          {t('stats.title')}
         </div>
 
         <div className="stats-layout">
@@ -122,7 +124,7 @@ export default function StatsSection() {
               ))}
             </div>
             <div className={`stats-note ${isVisible ? 'fade-in-active' : ''}`}>
-              2019년 ~ 2021년 기준 증가률
+              {t('stats.note')}
             </div>
           </div>
 

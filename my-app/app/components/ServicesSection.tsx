@@ -29,7 +29,7 @@ export default function ServicesSection() {
       }
     };
   }, []);
-  
+
   return (
     <section id="services" className={`services-section ${isVisible ? 'visible' : ''}`} ref={sectionRef}>
       <div className="container">
@@ -39,41 +39,41 @@ export default function ServicesSection() {
         </div>
 
         {/* 서비스 아이템 1 - 왼쪽 텍스트, 오른쪽 이미지 */}
-        <div className="service-item service-item-left" style={{ transitionDelay: '0.1s' }}>
+        <div id="service-ai" className="service-item service-item-left" style={{ transitionDelay: '0.1s' }}>
           <div className="service-content">
-            
+
             <h3 className="service-title">{t('services.sogini.title')}</h3>
             <p className="service-description">{t('services.sogini.description')}</p>
             <p className="service-detail">
-            {t('services.sogini.detail')}
+              {t('services.sogini.detail')}
             </p>
           </div>
-          <img 
-            src="/images/SoginiAI.jpg" 
-            alt="쏘지니 AI" 
+          <img
+            src="/images/SoginiAI.jpg"
+            alt="쏘지니 AI"
             className="service-image"
           />
         </div>
 
         {/* 서비스 아이템 2 - 왼쪽 이미지, 오른쪽 텍스트 (짝수) */}
-        <div className="service-item service-item-right" style={{ transitionDelay: '0.2s' }}>
+        <div id="service-predictive" className="service-item service-item-right" style={{ transitionDelay: '0.2s' }}>
           <div className="service-content">
-            
+
             <h3 className="service-title">{t('services.predictive.title')}</h3>
             <p className="service-description">{t('services.predictive.description')}</p>
             <p className="service-detail">
               {t('services.predictive.detail')}
             </p>
           </div>
-          <img 
-            src="/images/AIPredicted.png" 
-            alt="AI 예측 분석" 
+          <img
+            src="/images/AIPredicted.png"
+            alt="AI 예측 분석"
             className="service-image"
           />
         </div>
 
         {/* 서비스 아이템 3 - 왼쪽 텍스트, 오른쪽 이미지 */}
-        <div className="service-item service-item-left" style={{ transitionDelay: '0.3s' }}>
+        <div id="service-sensor" className="service-item service-item-left" style={{ transitionDelay: '0.3s' }}>
           <div className="service-content">
             <h3 className="service-title">{t('services.sensor.title')}</h3>
             <p className="service-description">{t('services.sensor.description')}</p>
@@ -82,16 +82,16 @@ export default function ServicesSection() {
             </p>
           </div>
           <div className="service-image-wrapper-gray">
-            <img 
-              src="/images/sensor_img1.png" 
-              alt="로봇 자동화" 
+            <img
+              src="/images/sensor_img1.png"
+              alt="로봇 자동화"
               className="service-image service-image-white-bg"
             />
           </div>
         </div>
 
         {/* 서비스 아이템 4 - 왼쪽 이미지, 오른쪽 텍스트 (짝수) */}
-        <div className="service-item service-item-right" style={{ transitionDelay: '0.4s' }}>
+        <div id="service-vision" className="service-item service-item-right" style={{ transitionDelay: '0.4s' }}>
           <div className="service-content">
             <div className="service-icon">
             </div>
@@ -101,18 +101,18 @@ export default function ServicesSection() {
               {t('services.vision.detail')}
             </p>
           </div>
-          <img 
-            src="/images/AIMachineVision1.png" 
-            alt="비전 검사 시스템" 
+          <img
+            src="/images/AIMachineVision1.png"
+            alt="비전 검사 시스템"
             className="service-image"
           />
         </div>
 
         {/* 서비스 아이템 5 - 왼쪽 텍스트, 오른쪽 이미지 */}
-        <div className="service-item service-item-left" style={{ transitionDelay: '0.5s' }}>
+        <div id="service-robot" className="service-item service-item-left" style={{ transitionDelay: '0.5s' }}>
           <div className="service-content">
             <div className="service-icon">
-              
+
             </div>
             <h3 className="service-title">{t('services.robot.title')}</h3>
             <p className="service-description">{t('services.robot.description')}</p>
@@ -120,9 +120,9 @@ export default function ServicesSection() {
               {t('services.robot.detail')}
             </p>
           </div>
-          <img 
-            src="/images/Robot.png" 
-            alt="MES 통합 시스템" 
+          <img
+            src="/images/Robot.png"
+            alt="MES 통합 시스템"
             className="service-image service-image-small"
           />
         </div>

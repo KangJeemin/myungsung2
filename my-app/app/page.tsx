@@ -16,6 +16,7 @@ import HistorySection from './components/HistorySection';
 import ECOPostSection from './components/ECOPostSection';
 import LocationSection from './components/LocationSection';
 import FloatingActions from './components/FloatingActions';
+import CareersContent from './components/CareersContent';
 export default function Home() {
   return (
     <>
@@ -23,16 +24,17 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <CustomerSection />
-      
+
       {/* <SolutionsSection /> */}
       <StatsSection />
       <ServicesSection />
       {/* <ContactSection /> */}
-      <TeamSection/>
+      <TeamSection />
       <PartnerSection />
-      <ESGSection/>
+      <ESGSection />
       <NewsSection />
       <HistorySection />
+      <CareersContent />
       <ECOPostSection />
       <LocationSection />
       <ContactSection />

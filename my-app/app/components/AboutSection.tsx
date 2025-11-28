@@ -11,11 +11,11 @@ export default function AboutSection() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) {
@@ -23,24 +23,24 @@ export default function AboutSection() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isVisible]);
 
   return (
-    <section id="about" className={`about-section ${isVisible ? 'visible' : ''}`} ref={sectionRef}>
+    <section id="about" className="about-section" ref={sectionRef}>
       <div className="container">
-        <div className="section-header">
+        <div className={`section-header ${isVisible ? 'fade-in-active' : ''}`}>
           <h2 className="section-title">{t('about.title')}
           </h2>
           <p className="section-description">
             {t('about.description')}
           </p>
         </div>
-        
+
         {/* 이미지 추가 */}
-        <div className="about-image-container">
-          <img 
-            src="/images/About.png" 
-            alt="About Us" 
+        <div className={`about-image-container ${isVisible ? 'fade-in-active' : ''}`}>
+          <img
+            src="/images/About.png"
+            alt="About Us"
             className="about-image"
           />
         </div>

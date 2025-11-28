@@ -11,11 +11,11 @@ export default function Customer() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) {
@@ -27,8 +27,8 @@ export default function Customer() {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
-  
+  }, [isVisible]);
+
   const items = [
     {
       title: t('customer.item1.title'),
@@ -49,12 +49,12 @@ export default function Customer() {
   ];
 
   return (
-    <section id="customer" className={`customer-section ${isVisible ? 'visible' : ''}`} ref={sectionRef}>
+    <section id="customer" className="customer-section" ref={sectionRef}>
       <div className="container">
         <div className="customer-layout">
           {/* 왼쪽: 타이틀 */}
           <div className="customer-left">
-            <div className="section-title customer-title">
+            <div className={`section-title customer-title ${isVisible ? 'fade-in-active' : ''}`}>
               {t('customer.title')}
             </div>
           </div>
@@ -63,9 +63,9 @@ export default function Customer() {
           <div className="customer-right">
             <div className="item-wrap-vertical">
               {items.map((item, index) => (
-                <div 
-                  key={index} 
-                  className="customer-item"
+                <div
+                  key={index}
+                  className={`customer-item ${isVisible ? 'fade-in-active' : ''}`}
                   style={{ animationDelay: `${0.2 + index * 0.1}s` }}
                 >
                   <dt className="customer-item-title">

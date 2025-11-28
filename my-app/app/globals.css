@@ -186,6 +186,7 @@ body {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -309,6 +310,41 @@ body {
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
 }
+
+.hero-nav-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero-nav-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    font-size: 0.95rem;
+}
+
+.hero-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 .hero-arrow {
     position: absolute;
     bottom: 30px;
@@ -318,16 +354,19 @@ body {
     cursor: pointer;
     animation: bounce 2s infinite;
     z-index: 2;
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateX(-50%) translateY(0);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
     }
+
     50% {
-      transform: translateX(-50%) translateY(20px);
+        transform: translateX(-50%) translateY(20px);
     }
-  }
+}
 
 .btn {
     padding: 1rem 2rem;
@@ -409,12 +448,13 @@ body {
     width: 100%;
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.about-section.visible .about-image-container {
+.about-image-container.fade-in-active {
     opacity: 1;
     transform: translateY(0);
+    transition-delay: 0.2s;
 }
 
 .about-image {
@@ -439,7 +479,7 @@ body {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.about-section.visible .section-header {
+.section-header.fade-in-active {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1017,9 +1057,12 @@ body {
 }
 
 @keyframes arrowBounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-8px);
     }
@@ -1241,13 +1284,24 @@ body {
     background: var(--white);
 }
 
+.customer-title {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.customer-title.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .customer-item {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.customer-section.visible .customer-item {
+.customer-item.fade-in-active {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1283,8 +1337,6 @@ body {
 .customer-item {
     background: var(--white);
     padding: 1.5rem 0;
-    animation: fadeInUp 0.6s ease forwards;
-    opacity: 0;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -1383,10 +1435,12 @@ body {
 
 .homePageLink {
     min-width: 200px;
+    background-color: #1a1a1a;
 }
 
 .homePageLink .item {
     margin-bottom: 2rem;
+    background-color: #1a1a1a;
 }
 
 .homePageLink .title {
@@ -1415,7 +1469,6 @@ body {
 .inquiry-title {
     font-weight: 700;
     font-size: 1rem;
-    color: #fff;
     margin-bottom: 1rem;
 }
 
@@ -1580,11 +1633,11 @@ body {
         flex-direction: column;
         gap: 2rem;
     }
-    
+
     .homePageLink {
         display: none;
     }
-    
+
     .homePageLink.mobile {
         display: block;
     }
@@ -1594,23 +1647,23 @@ body {
     .footer-nav {
         padding: 3rem 1.5rem 1.5rem;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         gap: 2rem;
         align-items: flex-start;
     }
-    
+
     .inquiry-items {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .terms {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .aboutLink {
         flex-direction: column;
         gap: 0.5rem;
@@ -1623,6 +1676,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1630,9 +1684,12 @@ body {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
@@ -1963,6 +2020,7 @@ body {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -1972,6 +2030,7 @@ body {
     0% {
         transform: translateX(-50%);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -2462,6 +2521,15 @@ body {
     line-height: 1.6;
 }
 
+.history-subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
 /* 모바일 탭 버전 */
 .history-mobile {
     display: none;
@@ -2583,9 +2651,7 @@ body {
 /* ECO Post 섹션 */
 .eco-post-section {
     padding: 7rem 0;
-    background: 
-        linear-gradient(135deg, rgba(46, 125, 50, 0.85) 0%, rgba(76, 175, 80, 0.85) 100%),
-        url('https://www.newspenguin.com/news/photo/202411/17949_37551_3533.jpg') center/cover no-repeat;
+    background: url('/images/ESGsection.jpg') center/cover no-repeat;
     position: relative;
     background-attachment: fixed;
 }
@@ -3006,6 +3072,7 @@ body {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -3074,10 +3141,14 @@ body {
 }
 
 @keyframes typing {
-    0%, 60%, 100% {
+
+    0%,
+    60%,
+    100% {
         transform: translateY(0);
         opacity: 0.7;
     }
+
     30% {
         transform: translateY(-10px);
         opacity: 1;
@@ -3140,6 +3211,7 @@ body {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -3163,6 +3235,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -3228,5 +3301,288 @@ body {
         right: 1.5rem;
         width: 45px;
         height: 45px;
+    }
+}
+
+/* Careers - Talent Section Styles */
+.talent-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.talent-section .section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.talent-section .section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.talent-section .section-title p {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+.talent-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 5rem;
+}
+
+.talent-item {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.talent-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), #667eea);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.talent-item:hover::before {
+    transform: scaleX(1);
+}
+
+.talent-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(79, 172, 254, 0.2);
+}
+
+.talent-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.talent-item:hover .talent-icon {
+    transform: rotateY(360deg) scale(1.1);
+}
+
+.talent-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+.talent-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.talent-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* Job Site Buttons Section */
+.job-site-section {
+    text-align: center;
+    padding: 3rem 0;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.job-site-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+.job-site-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.job-site-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.job-site-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.job-site-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.job-site-button svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.job-site-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.job-site-button:hover svg {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.job-site-button.saramin {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
+    color: white;
+}
+
+.job-site-button.saramin:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+}
+
+.job-site-button.jobkorea {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.job-site-button.jobkorea:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .talent-section .section-title h2 {
+        font-size: 2.5rem;
+    }
+
+    .talent-list {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .talent-section {
+        padding: 60px 0;
+    }
+
+    .talent-section .section-title {
+        margin-bottom: 3rem;
+    }
+
+    .talent-section .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .talent-section .section-title p {
+        font-size: 1rem;
+    }
+
+    .talent-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .talent-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .job-site-section-title {
+        font-size: 1.5rem;
+    }
+
+    .job-site-buttons {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .job-site-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .talent-section {
+        padding: 40px 0;
+    }
+
+    .talent-section .section-title h2 {
+        font-size: 1.75rem;
+    }
+
+    .talent-item {
+        padding: 1.5rem 1rem;
+    }
+
+    .talent-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .talent-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .talent-title {
+        font-size: 1.25rem;
+    }
+
+    .job-site-section {
+        padding: 2rem 1rem;
+    }
+
+    .job-site-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 }

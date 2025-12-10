@@ -83,15 +83,15 @@ export default function Navbar() {
   };
 
   return (
-    <nav 
-      className="navbar" 
+    <nav
+      className="navbar"
       style={getNavbarStyle()}
     >
       <div className="nav-container">
         <div className="logo">
-          <Link 
-            href="/" 
-            style={{ 
+          <Link
+            href="/"
+            style={{
               color: isGrewCampaignPage ? (scrolled ? 'var(--primary-color)' : '#ffffff') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'var(--primary-color)' : '#ffffff') : '#ffffff'
             }}
           >
@@ -100,8 +100,8 @@ export default function Navbar() {
         </div>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li>
-            <a 
-              href="#top" 
+            <a
+              href="#top"
               onClick={(e) => scrollToSection(e, 'top')}
               style={{ color: isGrewCampaignPage ? (scrolled ? 'var(--text-primary)' : '#ffffff') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'var(--text-primary)' : '#ffffff') : '#ffffff' }}
             >
@@ -109,53 +109,44 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a 
-              href="#services" 
+            <a
+              href="#services"
               onClick={(e) => scrollToSection(e, '#services')}
               style={{ color: isGrewCampaignPage ? (scrolled ? 'var(--text-primary)' : '#ffffff') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'var(--text-primary)' : '#ffffff') : '#ffffff' }}
             >
               {t('nav.products')}
             </a>
           </li>
-          <li>
-            <Link 
-              href="/careers" 
-              style={{ color: isGrewCampaignPage ? (scrolled ? 'var(--text-primary)' : '#ffffff') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'var(--text-primary)' : '#ffffff') : '#ffffff' }}
-            >
-              {t('nav.careers')}
-            </Link>
-          </li>
-         
-          <li 
+          <li
             className="language-selector"
             onMouseEnter={() => setShowLanguages(true)}
             onMouseLeave={() => setShowLanguages(false)}
           >
             <div className="language-icon-wrapper">
-              <svg 
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
                 strokeLinejoin="round"
                 style={{ color: isGrewCampaignPage ? (scrolled ? 'var(--text-primary)' : '#ffffff') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'var(--text-primary)' : '#ffffff') : '#ffffff' }}
               >
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
               </svg>
               {showLanguages && (
                 <div className="language-dropdown">
-                  <button 
+                  <button
                     className={`language-option ${language === 'ko' ? 'active' : ''}`}
                     onClick={() => setLanguage('ko')}
                   >
                     한국어
                   </button>
-                  <button 
+                  <button
                     className={`language-option ${language === 'en' ? 'active' : ''}`}
                     onClick={() => setLanguage('en')}
                   >
@@ -166,8 +157,8 @@ export default function Navbar() {
             </div>
           </li>
         </ul>
-        <div 
-          className="hamburger" 
+        <div
+          className="hamburger"
           onClick={() => setIsOpen(!isOpen)}
           style={{
             filter: isGrewCampaignPage ? (scrolled ? 'none' : 'brightness(0) invert(1)') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'none' : 'brightness(0) invert(1)') : 'brightness(0) invert(1)'

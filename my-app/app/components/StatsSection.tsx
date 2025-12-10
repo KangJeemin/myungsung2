@@ -10,10 +10,10 @@ export default function StatsSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
   const stats = [
-    { label: t('stats.stat1'), value: '1,028', unit: '%', growth: true },
-    { label: t('stats.stat2'), value: '1,256', unit: '%', growth: true },
-    { label: t('stats.stat3'), value: '13,067', unit: '%', growth: true },
-    { label: t('stats.stat4'), value: '25,025', unit: '%', growth: true }
+    { label: t('stats.stat1'), value: '439', unit: '억', growth: true },
+    { label: t('stats.stat2'), value: '1,000', unit: '억 달성', growth: false },
+    { label: t('stats.stat3'), value: '175', unit: '억', growth: true },
+    { label: t('stats.stat4'), value: '57', unit: '억', growth: true }
   ];
 
   // 숫자 카운팅 애니메이션 함수 (자릿수 유지)
@@ -26,13 +26,13 @@ export default function StatsSection() {
 
     const timer = setInterval(() => {
       currentStep++;
-      
+
       // 랜덤 숫자 생성 (자릿수 유지)
       let randomNum = '';
       for (let i = 0; i < targetLength; i++) {
         randomNum += Math.floor(Math.random() * 10);
       }
-      
+
       // 마지막 단계에서는 실제 값 표시
       if (currentStep >= steps) {
         clearInterval(timer);
@@ -57,7 +57,7 @@ export default function StatsSection() {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isVisible) {
             setIsVisible(true);
-            
+
             // 각 통계에 대해 숫자 카운팅 애니메이션 시작
             stats.forEach((stat, index) => {
               setTimeout(() => {
@@ -89,8 +89,8 @@ export default function StatsSection() {
           <div className="stats-left">
             <div className="stats-list">
               {stats.map((stat, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`stat-item ${isVisible ? 'fade-in-active' : ''}`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
@@ -109,11 +109,11 @@ export default function StatsSection() {
                               <stop offset="100%" style={{ stopColor: '#3b82f6', stopOpacity: 1 }} />
                             </linearGradient>
                           </defs>
-                          <path 
-                            d="M12 4L12 20M12 4L6 10M12 4L18 10" 
-                            stroke="url(#blueGradient)" 
-                            strokeWidth="3" 
-                            strokeLinecap="round" 
+                          <path
+                            d="M12 4L12 20M12 4L6 10M12 4L18 10"
+                            stroke="url(#blueGradient)"
+                            strokeWidth="3"
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                           />
                         </svg>
@@ -123,16 +123,13 @@ export default function StatsSection() {
                 </div>
               ))}
             </div>
-            <div className={`stats-note ${isVisible ? 'fade-in-active' : ''}`}>
-              {t('stats.note')}
-            </div>
           </div>
 
           {/* 오른쪽: 그래프 이미지 */}
           <div className={`stats-right ${isVisible ? 'fade-in-active' : ''}`}>
-            <img 
-              src="/images/graph2.png" 
-              alt="Growth Graph" 
+            <img
+              src="/images/graph2.png"
+              alt="Growth Graph"
               className="stats-graph"
             />
           </div>

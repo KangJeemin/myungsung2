@@ -15,7 +15,7 @@ export const translations = {
       description: '혁신적인 AI 기술과 데이터 분석을 통해 자동제어를 최적화하고, 고객에게 최고의 서비스를 제공합니다.',
     },
     services: {
-      mainTitle: '제조현장의 자동제어에서 시작하여, AI, Robot, Vision의 Intelligence 사업으로',
+      mainTitle: '하드웨어부터 AI 솔루션까지, 미래 기술을 창조하는 통합 엔지니어링 리더 명성이엔티',
       sogini: {
         title: '쏘지니 AI',
         description: '제조 현장의 디지털 전환을 실현합니다',
@@ -44,11 +44,11 @@ export const translations = {
     },
     stats: {
       title: '고객과 함께 성장하며 유의미한 변화를 만듭니다',
-      stat1: '가입 회원 수',
-      stat2: '계약 고객 수',
-      stat3: '스마트스토어 출고량',
-      stat4: '스마트스토어 취급 상품 수',
-      note: '2019년 ~ 2021년 기준 증가률',
+      stat1: '13년간 매출액 지속 상승',
+      stat2: 'Vision 3010 기술혁신으로 2030년 매출',
+      stat3: '명성 헝가리 법인',
+      stat4: 'JST(자회사)',
+
     },
     history: {
       title: '쉼 없이 뛰어왔고 이제 도약합니다',
@@ -61,11 +61,11 @@ export const translations = {
       },
       item2: {
         title: '혁신',
-        description: 'AI, 물류자동화 등의 최신 기술을 활용해서 데이터 기반으로 오류 없는 정확한 서비스를 구현합니다.',
+        description: 'AI, 자동화등의 최신 기술을 활용해서 데이터 기반으로 오류 없는 정확한 서비스를 구현합니다.',
       },
       item3: {
         title: '신속',
-        description: '더욱 빠르고 정확한 서비스를 구현하기 위해 데이터 연동을 통한 원스톱 풀필먼트 서비스를 제공합니다.',
+        description: '더욱 빠르고 정확한 서비스를 구현하기 위해 데이터가 신호를 보내면, 설비는 멈추기 전에 우리가 먼저 반응합니다.',
       },
       item4: {
         title: '상생',
@@ -74,7 +74,7 @@ export const translations = {
     },
     team: {
       title: '변화를 만드는 명성',
-      description: '명성은 충분한 권한과 자율성을 가지고 일하며, 다양성에 기초한 상호 존중을 바탕으로 건강한 조직문화를 만들어 갑니다.',
+      description: '명성은 성실·투명·솔직·적극의 가치를 바탕으로 열린 기업 문화를 지향하며, 건강한 조직문화를 만들어 가고 있습니다.',
     },
     esg: {
       title: '명성 ESG 경영',
@@ -103,6 +103,10 @@ export const translations = {
     },
     partners: {
       title: '명성과 함께하고 있는 파트너',
+    },
+    certifications: {
+      title: '인증 현황',
+      subtitle: '명성에이엔티의 기술력과 신뢰성을 입증하는 다양한 인증 및 특허',
     },
     grewCampaign: {
       hero: {
@@ -143,23 +147,23 @@ export const translations = {
         title: '인재상',
         subtitle: '명성에이엔티가 추구하는 인재상',
         item1: {
-          title: '전문성을 갖춘 인재',
+          title: '전문성',
           desc: '스마트팩토리 분야의 전문 지식과 기술을 보유하고 지속적으로 학습하며 성장하는 인재',
         },
         item2: {
-          title: '혁신적 사고를 가진 인재',
+          title: '혁신적 사고',
           desc: '새로운 아이디어로 문제를 해결하고 기술 혁신을 통해 가치를 창출하는 인재',
         },
         item3: {
-          title: '협력하는 인재',
+          title: '협력',
           desc: '팀워크를 중시하고 소통을 통해 함께 성장하는 협력적인 인재',
         },
         item4: {
-          title: '글로벌 마인드를 가진 인재',
+          title: '글로벌 마인드',
           desc: '글로벌 시장을 이해하고 국제적 감각으로 도전하는 인재',
         },
         item5: {
-          title: '주인의식을 가진 인재',
+          title: '주인의식',
           desc: '회사와 업무에 대한 책임감을 가지고 능동적으로 업무를 수행하는 인재',
         },
       },
@@ -257,27 +261,6 @@ export const translations = {
       submitting: '전송 중...',
       success: '문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.',
       error: '문의 전송에 실패했습니다. 다시 시도해주세요.',
-    },
-    footer: {
-      newAutomation: '새로운 자동화의 시작',
-      customerService: '고객센터',
-      serviceInquiry: '서비스 이용문의',
-      partnershipInquiry: '제휴문의',
-      recruitmentInquiry: '채용문의',
-      ethicsReport: '윤리준법 제보',
-      headquarters: '본사',
-      ceo: '대표',
-      privacyOfficer: '개인정보관리책임자',
-      businessNumber: '사업자등록번호',
-      ecommerceNumber: '통신판매업신고번호',
-      signupTerms: '회원가입 이용약관',
-      serviceTerms: '서비스 이용약관',
-      privacyPolicy: '개인정보처리방침',
-      news: '명성 소식',
-      notice: '공지사항',
-      patents: '특허/인증서',
-      socialContribution: '사회공헌',
-      copyright: 'Ⓒ FASSTO Corporation. All rights reserved.',
     },
   },
   en: {
@@ -384,6 +367,10 @@ export const translations = {
     },
     partners: {
       title: 'Partners Working with Myungsung',
+    },
+    certifications: {
+      title: 'Certifications',
+      subtitle: 'Various certifications and patents proving Myungsung E&T\'s technology and reliability',
     },
     grewCampaign: {
       hero: {

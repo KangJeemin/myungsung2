@@ -96,7 +96,14 @@ export default function HistorySection() {
         <div className="history-slider desktop">
           <div className="history-track">
             {years.map((year, yearIndex) => (
-              <div key={year} className="history-year-item" style={{ animationDelay: `${0.6 + yearIndex * 0.1}s` }}>
+              <div
+                key={year}
+                className="history-year-item"
+                style={{
+                  animationDelay: `${0.6 + yearIndex * 0.1}s`,
+                  marginLeft: year === '2011 ~ 2020' ? '4rem' : '0'
+                }}
+              >
                 <div className="year-title">{year}</div>
                 <div className="year-line"></div>
                 <div className="history-content">

@@ -30,8 +30,8 @@ export default function TeamSection() {
   }, []);
 
   return (
-    <section 
-      id="team" 
+    <section
+      id="team"
       className={`team-section ${isVisible ? 'visible' : ''}`}
       ref={sectionRef}
     >
@@ -54,11 +54,11 @@ export default function TeamSection() {
           {/* PC 버전 */}
           <div className="team-img-wrap-pc">
             <div className="team-img-column">
-              <img className="team-img team-img-01" src="https://cdn.fassto.ai/resources/imagesAbout/main/team_01.jpg" alt="팀 이미지 1" />
-              <img className="team-img team-img-02" src="https://cdn.fassto.ai/resources/imagesAbout/main/team_02.jpg" alt="팀 이미지 2" />
+              <img className="team-img team-img-01" src="/images/team/team1.jpg" alt="팀 이미지 1" />
+              <img className="team-img team-img-02" src="/images/team/team2.jpg" alt="팀 이미지 2" />
             </div>
             <div className="team-img-column">
-              <img className="team-img team-img-03" src="https://cdn.fassto.ai/resources/imagesAbout/main/team_03.jpg" alt="팀 이미지 3" />
+              <img className="team-img team-img-03" src="/images/team/team3.jpg" alt="팀 이미지 3" />
             </div>
           </div>
 

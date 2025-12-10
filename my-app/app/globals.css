@@ -59,6 +59,40 @@ body {
     }
 }
 
+/* 공통 섹션 헤더 스타일 */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-header.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.section-title span {
+    color: var(--primary-color);
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
 /* 네비게이션 */
 .navbar {
     position: fixed;
@@ -947,7 +981,7 @@ body {
 .stats-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 3rem;
+    gap: 3.5rem 3rem;
 }
 
 .stat-item {
@@ -965,12 +999,13 @@ body {
     font-size: 1rem;
     color: var(--text-secondary);
     margin-bottom: 0.5rem;
+    min-width: 300px;
 }
 
 .stat-value-container {
     display: flex;
     align-items: baseline;
-    gap: 0.2rem;
+    gap: 0.25rem;
 }
 
 .stat-value {
@@ -979,15 +1014,16 @@ body {
     color: var(--text-primary);
     font-family: 'Arial', sans-serif;
     transition: all 0.1s ease;
-    min-width: 200px;
     display: inline-block;
-    text-align: left;
 }
 
 .stat-unit {
     font-size: 2rem;
     font-weight: 700;
     color: var(--text-primary);
+    transform: translateY(-0.2rem);
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .growth-arrow {
@@ -1965,6 +2001,7 @@ body {
 .partners-slider-wrapper {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 .partners-slider {
@@ -2008,6 +2045,21 @@ body {
     object-fit: contain;
     filter: grayscale(0%);
     opacity: 1;
+}
+
+.partner-item img[alt="LG에너지솔루션"] {
+    width: 130%;
+    height: 130%;
+}
+
+.partner-item img[alt="SK이노베이션"] {
+    width: 130%;
+    height: 130%;
+}
+
+.partner-item img[alt="한화솔루션"] {
+    width: 130%;
+    height: 130%;
 }
 
 .partner-item img[alt="DEVICE"] {
@@ -2064,6 +2116,21 @@ body {
     object-fit: contain;
     filter: grayscale(0%);
     opacity: 1;
+}
+
+.partner-item-mobile img[alt="LG에너지솔루션"] {
+    width: 130%;
+    height: 130%;
+}
+
+.partner-item-mobile img[alt="SK이노베이션"] {
+    width: 130%;
+    height: 130%;
+}
+
+.partner-item-mobile img[alt="한화솔루션"] {
+    width: 130%;
+    height: 130%;
 }
 
 .partner-item-mobile img[alt="DEVICE"] {
@@ -2456,7 +2523,7 @@ body {
 
 .history-track {
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
     min-width: min-content;
     position: relative;
 }
@@ -2473,7 +2540,7 @@ body {
 }
 
 .history-year-item {
-    min-width: 350px;
+    min-width: 280px;
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.6s ease;
@@ -3310,6 +3377,11 @@ body {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
+.talent-section .container {
+    max-width: 1600px;
+    padding: 0 2rem;
+}
+
 .talent-section .section-title {
     text-align: center;
     margin-bottom: 4rem;
@@ -3329,8 +3401,8 @@ body {
 
 .talent-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
     list-style: none;
     padding: 0;
     margin-bottom: 5rem;
@@ -3584,5 +3656,884 @@ body {
     .job-site-button {
         padding: 1rem 2rem;
         font-size: 1rem;
+    }
+}
+
+/* Certification 섹션 */
+.certification-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.certification-section .container {
+    max-width: 1600px;
+    padding: 0 2rem;
+}
+
+.certification-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.certification-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(40, 167, 69, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.certification-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.certification-section.visible .certification-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certification-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+    transition-delay: 0.1s;
+}
+
+.certification-section.visible .certification-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.certification-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(40px);
+    position: relative;
+    overflow: hidden;
+}
+
+.certification-section.visible .certification-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certification-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), #667eea);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.certification-card:hover::before {
+    transform: scaleX(1);
+}
+
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(79, 172, 254, 0.2);
+}
+
+.certification-icon {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.certification-card:hover .certification-icon {
+    transform: rotateY(360deg) scale(1.1);
+}
+
+.certification-icon svg {
+    width: 48px;
+    height: 48px;
+    color: var(--white);
+}
+
+.certification-header {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.certification-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.certification-card-title-en {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.certification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.certification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    padding: 0.25rem 0;
+}
+
+.certification-item:hover {
+    transform: translateX(5px);
+}
+
+.certification-bullet {
+    color: #007bff;
+    font-size: 1.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+    font-weight: 700;
+}
+
+.certification-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* 반응형 */
+@media (max-width: 1400px) {
+    .certification-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .certification-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .certification-section {
+        padding: 6rem 0;
+    }
+
+    .certification-title {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .certification-subtitle {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .certification-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .certification-card {
+        padding: 2rem;
+    }
+
+    .certification-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certification-section {
+        padding: 4rem 0;
+    }
+
+    .certification-card {
+        padding: 1.75rem;
+    }
+
+    .certification-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .certification-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .certification-card-title {
+        font-size: 1.35rem;
+    }
+
+    .certification-card-title-en {
+        font-size: 0.85rem;
+    }
+
+    .certification-text {
+        font-size: 0.9rem;
+    }
+
+    .certification-list {
+        gap: 0.75rem;
+    }
+}
+
+/* Certification Modal */
+.certification-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+}
+
+.certification-modal-content {
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    height: 90vh;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+}
+
+.certification-modal-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.certification-modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.certification-modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+    line-height: 1;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.certification-modal-close:hover {
+    color: var(--primary-color);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.certification-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.certification-modal-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.certification-modal-image:hover {
+    transform: scale(1.02);
+}
+
+/* Add pointer cursor to clickable cards */
+.certification-card.clickable {
+    cursor: pointer;
+}
+
+.certification-card.clickable:hover {
+    border: 2px solid var(--primary-color);
+}
+
+/* ========================================
+   Evolution Section - Step Timeline Style
+   ======================================== */
+.evolution-step-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 헤더 스타일 */
+.evolution-step-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.evolution-step-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.25rem;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 50px;
+}
+
+.step-main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.step-main-title span {
+    color: var(--primary-color);
+}
+
+.step-description {
+    font-size: 1.15rem;
+    color: #64748b;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* 수평 타임라인 */
+.horizontal-timeline {
+    position: relative;
+    padding: 4rem 0 2rem;
+}
+
+/* 연결 트랙 */
+.timeline-track {
+    position: absolute;
+    top: calc(4rem + 28px);
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.track-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #6b7280, #3b82f6, #8b5cf6, #06b6d4);
+    border-radius: 2px;
+    transition: width 1.5s ease;
+}
+
+.timeline-track.animate .track-progress {
+    width: 75%;
+}
+
+/* 스텝 카드들 */
+.step-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* 개별 스텝 카드 */
+.step-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.step-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 스텝 노드 */
+.step-node {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 3;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.step-card.completed .step-node {
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-color: #10b981;
+}
+
+.step-card.current .step-node {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.2);
+}
+
+.step-card.upcoming .step-node {
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    border-color: #06b6d4;
+}
+
+.node-inner {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.node-inner svg {
+    width: 24px;
+    height: 24px;
+}
+
+.pulse-dot {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+}
+
+.node-arrow {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 연도 태그 */
+.step-year-tag {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.year-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.year-period {
+    display: block;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+/* 카드 본문 */
+.step-card-body {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.75rem;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: all 0.4s ease;
+}
+
+.step-card-body:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    border-color: transparent;
+}
+
+.step-card.completed .step-card-body:hover {
+    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.15);
+}
+
+.step-card.current .step-card-body {
+    border-color: #3b82f6;
+    border-width: 2px;
+}
+
+.step-card.current .step-card-body:hover {
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+}
+
+.step-card.upcoming .step-card-body:hover {
+    box-shadow: 0 12px 40px rgba(6, 182, 212, 0.15);
+}
+
+/* 카드 헤더 */
+.step-card-body .card-header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.step-card-body .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.step-card.completed .card-title {
+    color: #059669;
+}
+
+.step-card.current .card-title {
+    color: #2563eb;
+}
+
+.step-card.upcoming .card-title {
+    color: #0891b2;
+}
+
+.step-card-body .card-subtitle {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* 카드 리스트 */
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: #475569;
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed #f1f5f9;
+}
+
+.card-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.list-bullet {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    flex-shrink: 0;
+}
+
+.step-card.completed .list-bullet {
+    background: #10b981;
+}
+
+.step-card.current .list-bullet {
+    background: #3b82f6;
+}
+
+.step-card.upcoming .list-bullet {
+    background: #06b6d4;
+}
+
+/* 하단 슬로건 */
+.step-slogan {
+    margin-top: 4rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.8s, transform 0.8s ease 0.8s;
+}
+
+.step-slogan.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slogan-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    padding: 1.25rem 2.5rem;
+    border-radius: 100px;
+    box-shadow: 0 10px 40px rgba(30, 41, 59, 0.2);
+}
+
+.slogan-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan-icon svg {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+
+.slogan-content p {
+    font-size: 1.05rem;
+    color: #fff;
+    margin: 0;
+}
+
+.slogan-content strong {
+    color: #fbbf24;
+}
+
+/* 반응형 - 태블릿 */
+@media (max-width: 1024px) {
+    .step-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 2rem;
+    }
+
+    .timeline-track {
+        display: none;
+    }
+
+    .step-main-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* 반응형 - 모바일 (수직 타임라인으로 전환) */
+@media (max-width: 768px) {
+    .evolution-step-section {
+        padding: 60px 0;
+    }
+
+    .evolution-step-header {
+        margin-bottom: 3rem;
+    }
+
+    .step-main-title {
+        font-size: 2rem;
+    }
+
+    .step-description {
+        font-size: 1rem;
+    }
+
+    .horizontal-timeline {
+        padding: 2rem 0;
+    }
+
+    .step-cards {
+        grid-template-columns: 1fr;
+        gap: 0;
+        position: relative;
+        padding-left: 50px;
+    }
+
+    /* 수직 연결선 */
+    .step-cards::before {
+        content: '';
+        position: absolute;
+        left: 27px;
+        top: 28px;
+        bottom: 28px;
+        width: 4px;
+        background: linear-gradient(180deg, #10b981, #3b82f6, #06b6d4);
+        border-radius: 2px;
+    }
+
+    .step-card {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .step-node {
+        position: absolute;
+        left: 0;
+        margin-bottom: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    .step-year-tag {
+        display: none;
+    }
+
+    .step-card-body {
+        flex: 1;
+    }
+
+    .step-card-body .card-header {
+        text-align: left;
+    }
+
+    .step-card-body .card-header::before {
+        content: attr(data-year);
+        display: block;
+        font-size: 0.8rem;
+        color: #94a3b8;
+        margin-bottom: 0.25rem;
+    }
+
+    .slogan-content {
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .evolution-step-section {
+        padding: 40px 0;
+    }
+
+    .step-label {
+        font-size: 0.75rem;
+    }
+
+    .step-main-title {
+        font-size: 1.6rem;
+    }
+
+    .step-cards {
+        padding-left: 40px;
+    }
+
+    .step-cards::before {
+        left: 17px;
+    }
+
+    .step-node {
+        width: 40px;
+        height: 40px;
+    }
+
+    .node-inner svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .step-card-body {
+        padding: 1.25rem;
+    }
+
+    .step-card-body .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-list li {
+        font-size: 0.85rem;
+    }
+
+    .slogan-content p {
+        font-size: 0.95rem;
     }
 }

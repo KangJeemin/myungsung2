@@ -17,25 +17,33 @@ import ECOPostSection from './components/ECOPostSection';
 import LocationSection from './components/LocationSection';
 import FloatingActions from './components/FloatingActions';
 import CareersContent from './components/CareersContent';
+import CertificationSection from './components/CertificationSection';
+import EvolutionSection from './components/EvolutionSection';
+
 export default function Home() {
   return (
     <>
       <Navbar />
       <HeroSection />
+      <ServicesSection />
       <AboutSection />
+
       <CustomerSection />
 
       {/* <SolutionsSection /> */}
       <StatsSection />
-      <ServicesSection />
+
       {/* <ContactSection /> */}
       <TeamSection />
       <PartnerSection />
+      <CertificationSection />
+      <ECOPostSection />
       <ESGSection />
       <NewsSection />
       <HistorySection />
+      <EvolutionSection />
       <CareersContent />
-      <ECOPostSection />
+
       <LocationSection />
       <ContactSection />
       <Footer />

@@ -95,7 +95,7 @@ export default function Navbar() {
               color: isGrewCampaignPage ? (scrolled ? 'var(--primary-color)' : '#ffffff') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'var(--primary-color)' : '#ffffff') : '#ffffff'
             }}
           >
-            MYUNGSUNG
+            Myeongseong
           </Link>
         </div>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>

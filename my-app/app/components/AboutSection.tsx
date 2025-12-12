@@ -36,10 +36,9 @@ export default function AboutSection() {
           </p>
         </div>
 
-        {/* 이미지 추가 */}
         <div className={`about-image-container ${isVisible ? 'fade-in-active' : ''}`}>
           <img
-            src="/images/About.png"
+            src="https://storage.cloud.google.com/myeongseong-homepage-resource/images/About.png"
             alt="About Us"
             className="about-image"
           />

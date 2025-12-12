@@ -1450,6 +1450,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-topLogo {
@@ -1467,6 +1471,8 @@ body {
     margin-bottom: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid #2a2a2a;
+    width: 100%;
+    justify-content: center;
 }
 
 .homePageLink {
@@ -1496,6 +1502,9 @@ body {
 
 .infoWrap {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .inquiry {
@@ -1516,6 +1525,7 @@ body {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem 1.5rem;
 }
 
@@ -1566,6 +1576,7 @@ body {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+    justify-content: center;
 }
 
 .terms a {
@@ -1584,6 +1595,7 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .aboutLink a {
@@ -1600,8 +1612,11 @@ body {
 .footer-bottom {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
 }
 
 .footer-sns {
@@ -2718,7 +2733,7 @@ body {
 /* ECO Post 섹션 */
 .eco-post-section {
     padding: 7rem 0;
-    background: url('/images/ESGsection.jpg') center/cover no-repeat;
+    background: url('https://storage.googleapis.com/myeongseong-homepage-resource/images/ESGsection.jpg') center/cover no-repeat;
     position: relative;
     background-attachment: fixed;
 }
@@ -4541,7 +4556,8 @@ body {
 /* New Services Section - Bento Grid Style */
 .services-new-section {
     padding: 8rem 0;
-    background: #f8fafc; /* light background */
+    background: #f8fafc;
+    /* light background */
     overflow: hidden;
 }
 
@@ -4584,7 +4600,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    grid-auto-rows: 320px; /* Fixed height unit */
+    grid-auto-rows: 320px;
+    /* Fixed height unit */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -4657,7 +4674,7 @@ body {
 }
 
 .bento-item.item-large .bento-text {
-     flex: 0 0 40%;
+    flex: 0 0 40%;
 }
 
 .bento-text h3 {
@@ -4716,7 +4733,7 @@ body {
     left: 0;
     width: 100%;
     padding: 2rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     color: white;
 }
 
@@ -4788,20 +4805,20 @@ body {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 300px;
     }
-    
+
     .item-large {
         grid-column: span 2;
         grid-row: span 2;
     }
-    
+
     .item-medium {
         grid-column: span 1;
     }
-    
+
     .item-wide {
         grid-column: span 2;
     }
-    
+
     .item-standard {
         grid-column: span 1;
     }
@@ -4813,7 +4830,7 @@ body {
         grid-auto-rows: auto;
         gap: 20px;
     }
-    
+
     .bento-item {
         grid-column: span 1 !important;
         grid-row: auto !important;
@@ -4828,11 +4845,11 @@ body {
     .bento-item.item-large .bento-text {
         flex: 0 0 auto;
     }
-    
+
     .bento-image-wrapper {
         min-height: 200px;
     }
-    
+
     .services-new-title {
         font-size: 2.5rem;
     }
@@ -4852,4 +4869,3 @@ body {
 .footer-btn-link:hover {
     color: #fff;
 }
-

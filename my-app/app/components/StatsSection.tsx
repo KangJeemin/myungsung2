@@ -128,7 +128,7 @@ export default function StatsSection() {
           {/* 오른쪽: 그래프 이미지 */}
           <div className={`stats-right ${isVisible ? 'fade-in-active' : ''}`}>
             <img
-              src="/images/graph2.png"
+              src="https://storage.cloud.google.com/myeongseong-homepage-resource/images/graph2.png"
               alt="Growth Graph"
               className="stats-graph"
             />

@@ -50,7 +50,7 @@ export default function ServicesSection2() {
                                 <span className="bento-link">Learn More &rarr;</span>
                             </div>
                             <div className="bento-image-wrapper">
-                                <img src="/images/SoginiAI.jpg" alt="Sogini AI" />
+                                <img src="https://storage.cloud.google.com/myeongseong-homepage-resource/images/SoginiAI.jpg" alt="Sogini AI" />
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@ export default function ServicesSection2() {
                     <div className="bento-item item-medium" style={{ transitionDelay: '0.2s' }}>
                         <div className="bento-content">
                             <div className="bento-image-wrapper full-height">
-                                <img src="/images/AIPredicted.png" alt="AI Prediction" />
+                                <img src="https://storage.cloud.google.com/myeongseong-homepage-resource/images/AIPredicted.png" alt="AI Prediction" />
                                 <div className="bento-overlay">
                                     <h3>{t('services.predictive.title')}</h3>
                                     <p>{t('services.predictive.description')}</p>

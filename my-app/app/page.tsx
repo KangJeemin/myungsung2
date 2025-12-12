@@ -2,7 +2,9 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import CustomerSection from './components/CustomerSection';
-import ServicesSection from './components/ServicesSection';
+import ServicesSection2 from './components/ServicesSection2';
+import AiVisionSection from './components/AiVisionSection';
+import AiResourcesSection from './components/AiResourcesSection';
 import SolutionsSection from './components/SolutionsSection';
 import StatsSection from './components/StatsSection';
 import CareersSection from './components/CareersSection';
@@ -25,7 +27,7 @@ export default function Home() {
     <>
       <Navbar />
       <HeroSection />
-      <ServicesSection />
+      <ServicesSection2 />
       <AboutSection />
 
       <CustomerSection />
@@ -36,11 +38,11 @@ export default function Home() {
       {/* <ContactSection /> */}
       <TeamSection />
       <PartnerSection />
-      <CertificationSection />
+      {/* <CertificationSection /> */}
       <ECOPostSection />
       <ESGSection />
       <NewsSection />
-      <HistorySection />
+      {/* <HistorySection /> */}
       <EvolutionSection />
       <CareersContent />
 

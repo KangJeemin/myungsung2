@@ -15,7 +15,7 @@ export const translations = {
       description: '혁신적인 AI 기술과 데이터 분석을 통해 자동제어를 최적화하고, 고객에게 최고의 서비스를 제공합니다.',
     },
     services: {
-      mainTitle: '하드웨어부터 AI 솔루션까지, 미래 기술을 창조하는 통합 엔지니어링 리더 명성이엔티',
+      mainTitle: '하드웨어부터 AI 솔루션까지,',
       sogini: {
         title: '쏘지니 AI',
         description: '제조 현장의 디지털 전환을 실현합니다',

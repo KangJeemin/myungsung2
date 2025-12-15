@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     // 이메일 전송
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev', // Resend에서 인증된 도메인으로 변경 필요
-      to: ['wlals1234560@gmail.com'], // 받는 이메일 주소
+      to: email, // 받는 이메일 주소
       subject: `[명성에이앤티 문의] ${name}님의 문의`,
       html: `
         <!DOCTYPE html>
@@ -123,17 +123,17 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json(
-      { 
-        success: true, 
+      {
+        success: true,
         message: '문의가 성공적으로 전송되었습니다.',
-        data 
+        data
       },
       { status: 200 }
     );
   } catch (error) {
     console.error('이메일 전송 오류:', error);
     return NextResponse.json(
-      { 
+      {
         error: '이메일 전송 중 오류가 발생했습니다. 다시 시도해주세요.',
         details: error instanceof Error ? error.message : '알 수 없는 오류'
       },

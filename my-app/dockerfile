@@ -1,58 +1,49 @@
 FROM node:20-alpine AS base
 
-# 1. 의존성 설치 단계 (deps)
-# 필요한 라이브러리만 설치하여 레이어 크기 최소화
+# 1. 의존성 설치 단계
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# 패키지 파일 복사 및 설치
+# 패키지 매니저 파일 복사
 COPY package.json package-lock.json* ./
 RUN npm ci
 
-# 2. 빌드 단계 (builder)
-# 소스 코드를 복사하고 빌드를 수행합니다
+# 2. 빌드 단계
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# 텔레메트리 비활성화 (선택사항)
-ENV NEXT_TELEMETRY_DISABLED=1
+# 텔레메트리 비활성화 (선택)
+ENV NEXT_TELEMETRY_DISABLED 1
 
-# ★ 여기서 Next.js 소스를 빌드합니다 (npm run build)
+# 빌드 실행
 RUN npm run build
 
-# 3. 실행 단계 (runner)
-# 빌드된 결과물 중 필요한 것만 가져와서 실행합니다
+# 3. 실행 단계 (Production)
 FROM base AS runner
 WORKDIR /app
 
-ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# 정적 파일(이미지 등) 복사
+# ★ Standalone 모드가 아닌 기본 방식:
+# 빌드된 .next 폴더와 node_modules를 통째로 가져옵니다.
+# 용량은 커지지만 경로 문제가 사라집니다.
+
 COPY --from=builder /app/public ./public
-
-# 캐시 폴더 권한 설정
-RUN mkdir .next
-RUN chown nextjs:nodejs .next
-
-# ★ 빌드 결과물(standalone) 복사
-# standalone 모드는 실행에 필요한 최소한의 파일만 포함하여 가볍습니다.
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
 
 USER nextjs
 
 EXPOSE 3000
 
-ENV PORT=3000
-ENV HOSTNAME="0.0.0.0"
-
-# ★ 서버 실행 명령어
-# standalone 모드에서는 'next start' 대신 'node server.js'를 사용하여 실행합니다.
-CMD ["node", "server.js"]
+ENV PORT 3000
+# next start 명령어로 실행
+CMD ["npm", "start"]

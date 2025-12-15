@@ -119,8 +119,7 @@ export default function Navbar() {
           </li>
           <li
             className="language-selector"
-            onMouseEnter={() => setShowLanguages(true)}
-            onMouseLeave={() => setShowLanguages(false)}
+            onClick={() => setShowLanguages(!showLanguages)}
           >
             <div className="language-icon-wrapper">
               <svg

@@ -2,7 +2,12 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import CustomerSection from './components/CustomerSection';
+import ServicesSection from './components/ServicesSection2';
+import AiFeatureSection from './components/AiFeatureSection';
 import ServicesSection2 from './components/ServicesSection2';
+import AiVisionSection from './components/AiVisionSection';
+import AiResourcesSection from './components/AiResourcesSection';
+import SolutionsSection from './components/SolutionsSection';
 import StatsSection from './components/StatsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -21,7 +26,8 @@ export default function Home() {
     <>
       <Navbar />
       <HeroSection />
-      <ServicesSection2 />
+      <AiFeatureSection />
+      <ServicesSection />
       <AboutSection />
       <CustomerSection />
       <StatsSection />

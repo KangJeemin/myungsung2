@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* 기본 설정 */
 * {
     margin: 0;
@@ -187,9 +189,20 @@ body {
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+    overflow: visible;
+    /* Changed from hidden to allow pseudo-element outside */
     min-width: 120px;
     animation: fadeInDown 0.3s ease;
+}
+
+.language-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
 }
 
 .language-option {
@@ -206,12 +219,13 @@ body {
 }
 
 .language-option:hover {
-    background: var(--light-bg);
+    background: var(--primary-color);
+    color: white;
 }
 
 .language-option.active {
-    background: var(--primary-color);
-    color: white;
+    background: transparent;
+    color: var(--primary-color);
     font-weight: 600;
 }
 
@@ -4868,4 +4882,111 @@ body {
 
 .footer-btn-link:hover {
     color: #fff;
+}
+
+/* AI Feature Section Styles */
+.ai-section {
+    @apply py-24 bg-[#0a0f1c] relative overflow-hidden text-white font-sans;
+}
+
+.ai-bg-blob {
+    @apply absolute rounded-full pointer-events-none;
+}
+
+.ai-bg-blob-blue {
+    @apply top-[-20%] left-[20%] w-[800px] h-[800px] bg-blue-600/10 blur-[120px] animate-pulse;
+}
+
+.ai-bg-blob-purple {
+    @apply bottom-[-20%] right-[10%] w-[600px] h-[600px] bg-purple-600/10 blur-[100px];
+}
+
+.ai-bg-blob-cyan {
+    @apply top-[40%] left-[-10%] w-[400px] h-[400px] bg-cyan-500/10 blur-[80px];
+}
+
+.ai-container {
+    @apply container mx-auto px-4 relative z-10;
+}
+
+.ai-header {
+    @apply text-center mb-20 transition-all duration-1000;
+}
+
+.ai-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight;
+}
+
+.ai-title-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500;
+}
+
+.ai-description {
+    @apply text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed;
+}
+
+.ai-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto;
+}
+
+.ai-card {
+    @apply relative bg-[#131c2e]/80 border border-white/10 rounded-3xl overflow-hidden transition-all duration-500;
+}
+
+.ai-card-hover-cyan {
+    @apply hover:border-cyan-500/50;
+    transition: box-shadow 0.3s ease;
+}
+
+.ai-card-hover-cyan:hover {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+}
+
+.ai-card-hover-purple {
+    @apply hover:border-purple-500/50;
+    transition: box-shadow 0.3s ease;
+}
+
+.ai-card-hover-purple:hover {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+}
+
+.ai-card-overlay {
+    @apply absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none;
+}
+
+.ai-card-overlay-cyan {
+    @apply bg-gradient-to-br from-cyan-500/5 to-transparent;
+}
+
+.ai-card-overlay-purple {
+    @apply bg-gradient-to-br from-purple-500/5 to-transparent;
+}
+
+.ai-image-wrapper {
+    @apply relative h-[300px] sm:h-[400px] overflow-hidden bg-black/50;
+}
+
+.ai-image {
+    @apply w-full h-full object-cover transition-transform duration-700 group-hover:scale-105;
+}
+
+.ai-image-gradient {
+    @apply absolute inset-0 bg-gradient-to-t from-[#131c2e] via-transparent to-transparent;
+}
+
+.ai-card-content {
+    @apply p-8 relative;
+}
+
+.ai-card-title-en {
+    @apply text-2xl font-bold text-white mb-3;
+}
+
+.ai-card-title-kr {
+    @apply text-xl font-bold mb-4;
+}
+
+.ai-card-desc {
+    @apply text-slate-400 leading-relaxed mb-8;
 }

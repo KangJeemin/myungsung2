@@ -54,7 +54,7 @@ export const translations = {
       title: '쉼 없이 뛰어왔고 이제 도약합니다',
     },
     customer: {
-      title: '고객 만족을 최우선의 가치로 생각합니다',
+      title: '고객의 만족을 최우선의 가치로 생각합니다',
       item1: {
         title: '고객 감동',
         description: '고객이 원하는 서비스를 제공하는 것은 물론이고, 기대하지 못한 감동까지 주고자 노력합니다.',
@@ -261,6 +261,24 @@ export const translations = {
       submitting: '전송 중...',
       success: '문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.',
       error: '문의 전송에 실패했습니다. 다시 시도해주세요.',
+    },
+    aiFeature: {
+      title: {
+        line1: 'AI와 머신러닝으로 실현하는',
+        line2: '스마트 제조 전환',
+      },
+      description: {
+        line1: '데이터가 주도하는 제조업의 미래. 명성의 AI 솔루션이',
+        line2: '보이지 않는 문제를 예측하고 최적의 해답을 제시합니다.',
+      },
+      predictive: {
+        title: 'AI 예지보전',
+        description: '설비의 고장을 사전에 예측하여 다운타임을 획기적으로 줄입니다. 실시간 진동 분석 및 온도 모니터링을 통해 최적의 유지보수 시점을 알려드립니다.',
+      },
+      machineLearning: {
+        title: '고도화된 머신러닝',
+        description: '복잡한 산업 데이터에서 숨겨진 패턴을 발견합니다. 딥러닝 신경망을 통해 공정 변수를 스스로 학습하고 자동으로 최적화하는 지능형 시스템을 경험하세요.',
+      },
     },
   },
   en: {
@@ -525,6 +543,27 @@ export const translations = {
       patents: 'Patents/Certifications',
       socialContribution: 'Social Contribution',
       copyright: 'Ⓒ FASSTO Corporation. All rights reserved.',
+    },
+    aiFeature: {
+      badge: 'Myungsung AI Technology',
+      title: {
+        line1: 'Digital Transformation',
+        line2: 'with Artificial Intelligence',
+      },
+      description: {
+        line1: 'The future of manufacturing driven by data.',
+        line2: 'Myungsung\'s AI solutions predict unseen problems and provide optimal answers.',
+      },
+      predictive: {
+        title: 'AI Predictive Maintenance',
+        description: 'Dramatically reduce downtime by predicting equipment failures in advance. We inform you of the optimal maintenance timing through real-time vibration analysis and temperature monitoring.',
+        button: 'Explore Predictive Solutions',
+      },
+      machineLearning: {
+        title: 'Advanced Machine Learning',
+        description: 'Discover hidden patterns in complex industrial data. Experience an intelligent system that learns process variables on its own and optimizes automatically via deep learning neural networks.',
+        button: 'Discover AI Capabilities',
+      },
     },
   },
 };

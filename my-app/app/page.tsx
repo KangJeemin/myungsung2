@@ -3,6 +3,9 @@ import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import CustomerSection from './components/CustomerSection';
 import ServicesSection2 from './components/ServicesSection2';
+import ServicesSection from './components/ServicesSection';
+import AiFeatureSection from './components/AiFeatureSection';
+
 import AiVisionSection from './components/AiVisionSection';
 import AiResourcesSection from './components/AiResourcesSection';
 import SolutionsSection from './components/SolutionsSection';
@@ -27,25 +30,18 @@ export default function Home() {
     <>
       <Navbar />
       <HeroSection />
-      <ServicesSection2 />
+      <AiFeatureSection />
+      <ServicesSection />
       <AboutSection />
-
       <CustomerSection />
-
-      {/* <SolutionsSection /> */}
       <StatsSection />
-
-      {/* <ContactSection /> */}
       <TeamSection />
       <PartnerSection />
-      {/* <CertificationSection /> */}
       <ECOPostSection />
       <ESGSection />
       <NewsSection />
-      {/* <HistorySection /> */}
       <EvolutionSection />
       <CareersContent />
-
       <LocationSection />
       <ContactSection />
       <Footer />

@@ -2,7 +2,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import CustomerSection from './components/CustomerSection';
-import ServicesSection from './components/ServicesSection2';
+import ServicesSection from './components/ServicesSection';
 import AiFeatureSection from './components/AiFeatureSection';
 import ServicesSection2 from './components/ServicesSection2';
 import AiVisionSection from './components/AiVisionSection';

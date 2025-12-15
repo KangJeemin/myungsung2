@@ -61,7 +61,7 @@ export default function AiFeatureSection() {
                         {/* Image Area */}
                         <div className="ai-image-wrapper">
                             <img
-                                src="/images/ai_predictive_dashboard.png"
+                                src="https://storage.googleapis.com/myeongseong-homepage-resource/images/ai_predictive_dashboard.png"
                                 alt="AI 예지보전 대시보드"
                                 className="ai-image"
                             />
@@ -85,7 +85,7 @@ export default function AiFeatureSection() {
                         {/* Image Area */}
                         <div className="ai-image-wrapper">
                             <img
-                                src="/images/ai_learning_nodes.png"
+                                src="https://storage.googleapis.com/myeongseong-homepage-resource/images/ai_learning_nodes.png"
                                 alt="Advanced Machine Learning"
                                 className="ai-image"
                             />

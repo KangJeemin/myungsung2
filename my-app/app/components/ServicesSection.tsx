@@ -49,7 +49,7 @@ export default function ServicesSection() {
             </p>
           </div>
           <img
-            src="/images/SoginiAI.jpg"
+            src="https://storage.googleapis.com/myeongseong-homepage-resource/images/SoginiAI.jpg"
             alt="쏘지니 AI"
             className="service-image"
           />
@@ -66,7 +66,7 @@ export default function ServicesSection() {
             </p>
           </div>
           <img
-            src="/images/AIPredicted.png"
+            src="https://storage.cloud.google.com/myeongseong-homepage-resource/images/AIPredicted.png"
             alt="AI 예측 분석"
             className="service-image"
           />
@@ -83,7 +83,7 @@ export default function ServicesSection() {
           </div>
           <div className="service-image-wrapper-gray">
             <img
-              src="/images/sensor_img1.png"
+              src="https://storage.googleapis.com/myeongseong-homepage-resource/images/sensor_img1.png"
               alt="로봇 자동화"
               className="service-image service-image-white-bg"
             />
@@ -102,7 +102,7 @@ export default function ServicesSection() {
             </p>
           </div>
           <img
-            src="/images/AIMachineVision1.png"
+            src="https://storage.googleapis.com/myeongseong-homepage-resource/images/AIMachineVision1.png"
             alt="비전 검사 시스템"
             className="service-image"
           />
@@ -121,7 +121,7 @@ export default function ServicesSection() {
             </p>
           </div>
           <img
-            src="/images/Robot.png"
+            src="https://storage.googleapis.com/myeongseong-homepage-resource/images/Robot.png"
             alt="MES 통합 시스템"
             className="service-image service-image-small"
           />

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* 기본 설정 */
+/* 기본 ?�정 */
 * {
     margin: 0;
     padding: 0;
@@ -41,14 +41,14 @@ body {
     padding: 0 4rem;
 }
 
-/* 태블릿 */
+/* ?�블�?*/
 @media (max-width: 1024px) {
     .container {
         padding: 0 3rem;
     }
 }
 
-/* 모바일 */
+/* 모바??*/
 @media (max-width: 768px) {
     .container {
         padding: 0 2rem;
@@ -61,7 +61,7 @@ body {
     }
 }
 
-/* 공통 섹션 헤더 스타일 */
+/* 공통 ?�션 ?�더 ?��???*/
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -95,7 +95,7 @@ body {
     line-height: 1.6;
 }
 
-/* 네비게이션 */
+/* ?�비게이??*/
 .navbar {
     position: fixed;
     top: 0;
@@ -260,7 +260,7 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 히어로 섹션 */
+/* ?�어�??�션 */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -272,7 +272,7 @@ body {
     padding-top: 80px;
 }
 
-/* 배경 비디오 컨테이너 */
+/* 배경 비디??컨테?�너 */
 .hero-video-container {
     position: absolute;
     top: 0;
@@ -283,7 +283,7 @@ body {
     overflow: hidden;
 }
 
-/* 배경 비디오 */
+/* 배경 비디??*/
 .hero-video {
     position: absolute;
     top: 50%;
@@ -296,7 +296,7 @@ body {
     object-fit: cover;
 }
 
-/* 비디오 위 오버레이 (어둡게 처리) */
+/* 비디?????�버?�이 (?�둡�?처리) */
 .hero-video-overlay {
     position: absolute;
     top: 0;
@@ -304,7 +304,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    /* 그라데이션 오버레이로 변경하려면 아래 사용 */
+    /* 그라?�이???�버?�이�?변경하?�면 ?�래 ?�용 */
     /* background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%); */
 }
 
@@ -484,13 +484,13 @@ body {
     animation-delay: 2s;
 }
 
-/* About 섹션 */
+/* About ?�션 */
 .about-section {
     padding: 8rem 0;
     background: var(--white);
 }
 
-/* About 이미지 */
+/* About ?��?지 */
 .about-image-container {
     margin-top: 3rem;
     width: 100%;
@@ -604,13 +604,13 @@ body {
     color: var(--text-secondary);
 }
 
-/* Services 섹션 */
+/* Services ?�션 */
 .services-section {
     padding: 8rem 0;
     background: var(--white);
 }
 
-/* 섹션 헤더 - 토스 스타일 */
+/* ?�션 ?�더 - ?�스 ?��???*/
 .services-header {
     margin-bottom: 4rem;
 }
@@ -629,7 +629,7 @@ body {
     line-height: 1.5;
 }
 
-/* 서비스 아이템 - 토스 스타일 */
+/* ?�비???�이??- ?�스 ?��???*/
 .service-item {
     display: flex;
     align-items: center;
@@ -649,12 +649,12 @@ body {
     margin-bottom: 0;
 }
 
-/* 왼쪽 텍스트, 오른쪽 이미지 */
+/* ?�쪽 ?�스?? ?�른�??��?지 */
 .service-item-left {
     flex-direction: row;
 }
 
-/* 왼쪽 이미지, 오른쪽 텍스트 */
+/* ?�쪽 ?��?지, ?�른�??�스??*/
 .service-item-right {
     flex-direction: row-reverse;
 }
@@ -707,7 +707,7 @@ body {
     border-radius: 15px;
 }
 
-/* 서비스 아이콘 */
+/* ?�비???�이�?*/
 .service-icon {
     width: 48px;
     height: 48px;
@@ -719,7 +719,7 @@ body {
     height: 100%;
 }
 
-/* 서비스 제목 */
+/* ?�비???�목 */
 .service-title {
     font-size: 2rem;
     font-weight: 700;
@@ -727,7 +727,7 @@ body {
     margin-bottom: 1rem;
 }
 
-/* 서비스 설명 */
+/* ?�비???�명 */
 .service-description {
     font-size: 1.75rem;
     font-weight: 600;
@@ -736,14 +736,14 @@ body {
     margin-bottom: 1rem;
 }
 
-/* 서비스 상세 설명 */
+/* ?�비???�세 ?�명 */
 .service-detail {
     font-size: 1.125rem;
     color: var(--text-secondary);
     line-height: 1.6;
 }
 
-/* 기존 스타일 유지 (호환성) */
+/* 기존 ?��????��? (?�환?? */
 .services-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -765,7 +765,7 @@ body {
     border-radius: 30px;
 }
 
-/* 반응형 - 토스 스타일 */
+/* 반응??- ?�스 ?��???*/
 @media (max-width: 1024px) {
     .services-main-title {
         font-size: 2.5rem;
@@ -898,7 +898,7 @@ body {
     }
 }
 
-/* Solutions 섹션 */
+/* Solutions ?�션 */
 .solutions-section {
     padding: 8rem 0;
     background: var(--white);
@@ -957,7 +957,7 @@ body {
     animation: float 8s ease-in-out infinite;
 }
 
-/* Stats 섹션 */
+/* Stats ?�션 */
 .stats-section {
     padding: 8rem 0;
     background: var(--light-bg);
@@ -1093,7 +1093,7 @@ body {
     border-radius: 15px;
 }
 
-/* 화살표 바운스 애니메이션 */
+/* ?�살??바운???�니메이??*/
 .growth-arrow {
     opacity: 0;
     transform: translateY(10px);
@@ -1118,7 +1118,7 @@ body {
     }
 }
 
-/* Stats 반응형 */
+/* Stats 반응??*/
 @media (max-width: 1024px) {
     .stats-layout {
         grid-template-columns: 1fr;
@@ -1162,7 +1162,7 @@ body {
     }
 }
 
-/* Careers 섹션 */
+/* Careers ?�션 */
 .careers-section {
     padding: 8rem 0;
     background: var(--light-bg);
@@ -1222,7 +1222,7 @@ body {
     transform: translateX(10px);
 }
 
-/* Contact 섹션 */
+/* Contact ?�션 */
 .contact-section {
     padding: 8rem 0;
     background: var(--white);
@@ -1328,7 +1328,7 @@ body {
     cursor: not-allowed;
 }
 
-/* Customer 섹션 */
+/* Customer ?�션 */
 .customer-section {
     padding: 8rem 0;
     background: var(--white);
@@ -1413,7 +1413,7 @@ body {
     opacity: 1;
 }
 
-/* 태블릿 */
+/* ?�블�?*/
 @media (max-width: 1024px) {
     .customer-layout {
         grid-template-columns: 1fr;
@@ -1433,7 +1433,7 @@ body {
     }
 }
 
-/* 모바일 */
+/* 모바??*/
 @media (max-width: 768px) {
     .customer-title {
         font-size: 2rem;
@@ -1692,7 +1692,7 @@ body {
     color: #6a6a6a;
 }
 
-/* Footer 반응형 */
+/* Footer 반응??*/
 @media (max-width: 1024px) {
     .footer-info {
         flex-direction: column;
@@ -1735,7 +1735,7 @@ body {
     }
 }
 
-/* 애니메이션 */
+/* ?�니메이??*/
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1776,7 +1776,7 @@ body {
     animation-delay: 0.8s;
 }
 
-/* 반응형 */
+/* 반응??*/
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -1800,7 +1800,7 @@ body {
         left: 0;
     }
 
-    /* 모바일에서는 메뉴 텍스트 항상 어두운 색 */
+    /* 모바?�에?�는 메뉴 ?�스????�� ?�두????*/
     .nav-menu a {
         color: var(--text-primary) !important;
     }
@@ -1860,7 +1860,7 @@ body {
     }
 }
 
-/* Team 섹션 */
+/* Team ?�션 */
 .team-section {
     padding: 8rem 0;
     background: var(--white);
@@ -1930,7 +1930,7 @@ body {
     object-fit: cover;
 }
 
-/* 애니메이션 활성화 */
+/* ?�니메이???�성??*/
 .team-section.visible .team-title {
     opacity: 1;
     transform: translateY(0);
@@ -1946,7 +1946,7 @@ body {
     transform: translateY(0);
 }
 
-/* 반응형 */
+/* 반응??*/
 @media (max-width: 1024px) {
     .team-img-wrap-pc {
         flex-direction: column;
@@ -2007,7 +2007,7 @@ body {
     }
 }
 
-/* Partners 섹션 */
+/* Partners ?�션 */
 .partners-section {
     padding: 8rem 0;
     background: var(--white);
@@ -2076,17 +2076,17 @@ body {
     opacity: 1;
 }
 
-.partner-item img[alt="LG에너지솔루션"] {
+.partner-item img {
     width: 130%;
     height: 130%;
 }
 
-.partner-item img[alt="SK이노베이션"] {
+.partner-item img {
     width: 130%;
     height: 130%;
 }
 
-.partner-item img[alt="한화솔루션"] {
+.partner-item img {
     width: 130%;
     height: 130%;
 }
@@ -2096,7 +2096,7 @@ body {
     height: 120%;
 }
 
-/* 무한 스크롤 애니메이션 */
+/* 무한 ?�크�??�니메이??*/
 @keyframes scroll-left {
     0% {
         transform: translateX(0);
@@ -2117,7 +2117,7 @@ body {
     }
 }
 
-/* 모바일 그리드 */
+/* 모바??그리??*/
 .partners-grid {
     display: none;
 }
@@ -2147,17 +2147,17 @@ body {
     opacity: 1;
 }
 
-.partner-item-mobile img[alt="LG에너지솔루션"] {
+.partner-item-mobile img {
     width: 130%;
     height: 130%;
 }
 
-.partner-item-mobile img[alt="SK이노베이션"] {
+.partner-item-mobile img {
     width: 130%;
     height: 130%;
 }
 
-.partner-item-mobile img[alt="한화솔루션"] {
+.partner-item-mobile img {
     width: 130%;
     height: 130%;
 }
@@ -2167,7 +2167,7 @@ body {
     height: 120%;
 }
 
-/* 반응형 */
+/* 반응??*/
 .partners-slider-wrapper.desktop {
     display: flex;
 }
@@ -2217,7 +2217,7 @@ body {
     }
 }
 
-/* ESG 섹션 */
+/* ESG ?�션 */
 .esg-section {
     padding: 8rem 0;
     background: var(--light-bg);
@@ -2316,7 +2316,7 @@ body {
     margin-top: 0.5rem;
 }
 
-/* 반응형 */
+/* 반응??*/
 @media (max-width: 1024px) {
     .esg-list {
         flex-wrap: wrap;
@@ -2384,7 +2384,7 @@ body {
     }
 }
 
-/* News 섹션 */
+/* News ?�션 */
 .news-section {
     padding: 8rem 0;
     background: var(--white);
@@ -2467,7 +2467,7 @@ body {
     overflow: hidden;
 }
 
-/* 반응형 */
+/* 반응??*/
 @media (max-width: 1024px) {
     .news-list {
         flex-wrap: wrap;
@@ -2524,7 +2524,7 @@ body {
     }
 }
 
-/* History 섹션 */
+/* History ?�션 */
 .history-section {
     padding: 8rem 0;
     background: var(--white);
@@ -2626,7 +2626,7 @@ body {
     line-height: 1.4;
 }
 
-/* 모바일 탭 버전 */
+/* 모바????버전 */
 .history-mobile {
     display: none;
 }
@@ -2669,7 +2669,7 @@ body {
     border-radius: 15px;
 }
 
-/* 스크롤바 스타일 */
+/* ?�크롤바 ?��???*/
 .history-slider::-webkit-scrollbar {
     height: 8px;
 }
@@ -2688,7 +2688,7 @@ body {
     background: var(--primary-color);
 }
 
-/* 반응형 */
+/* 반응??*/
 @media (max-width: 768px) {
     .history-section {
         padding: 6rem 0;
@@ -2744,7 +2744,7 @@ body {
     }
 }
 
-/* ECO Post 섹션 */
+/* ECO Post ?�션 */
 .eco-post-section {
     padding: 7rem 0;
     background: url('https://storage.googleapis.com/myeongseong-homepage-resource/images/ESGsection.jpg') center/cover no-repeat;
@@ -2808,7 +2808,7 @@ body {
     opacity: 0.9;
 }
 
-/* 반응형 */
+/* 반응??*/
 @media (max-width: 768px) {
     .eco-post-section {
         padding: 5.5rem 0;
@@ -2837,7 +2837,7 @@ body {
     }
 }
 
-/* Location 섹션 */
+/* Location ?�션 */
 .location-section {
     padding: 8rem 0;
     background: var(--white);
@@ -2858,7 +2858,7 @@ body {
     transform: translateY(0);
 }
 
-/* 왼쪽: 본사 정보 */
+/* ?�쪽: 본사 ?�보 */
 .location-left {
     display: flex;
     flex-direction: column;
@@ -2916,7 +2916,7 @@ body {
     height: 18px;
 }
 
-/* 오른쪽: 찾아오시는 길 + 지도 */
+/* ?�른�? 찾아?�시??�?+ 지??*/
 .location-right {
     display: flex;
     flex-direction: column;
@@ -2976,7 +2976,7 @@ body {
     z-index: 10;
 }
 
-/* 반응형 */
+/* 반응??*/
 @media (max-width: 1024px) {
     .location-layout {
         grid-template-columns: 1fr;
@@ -3338,7 +3338,7 @@ body {
     }
 }
 
-/* 모바일 */
+/* 모바??*/
 @media (max-width: 768px) {
     .floating-actions {
         bottom: 1.5rem;
@@ -3359,7 +3359,7 @@ body {
     }
 }
 
-/* 맨 위로 가기 버튼 (레거시, 호환성 유지) */
+/* �??�로 가�?버튼 (?�거?? ?�환???��?) */
 .scroll-to-top {
     position: fixed;
     bottom: 2rem;
@@ -3390,7 +3390,7 @@ body {
     transform: translateY(-1px);
 }
 
-/* 모바일 */
+/* 모바??*/
 @media (max-width: 768px) {
     .scroll-to-top {
         bottom: 1.5rem;
@@ -3688,7 +3688,7 @@ body {
     }
 }
 
-/* Certification 섹션 */
+/* Certification ?�션 */
 .certification-section {
     padding: 100px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -3880,7 +3880,7 @@ body {
     color: #666;
 }
 
-/* 반응형 */
+/* 반응??*/
 @media (max-width: 1400px) {
     .certification-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -4066,7 +4066,7 @@ body {
     overflow: hidden;
 }
 
-/* 헤더 스타일 */
+/* ?�더 ?��???*/
 .evolution-step-header {
     text-align: center;
     margin-bottom: 5rem;
@@ -4112,13 +4112,13 @@ body {
     margin: 0 auto;
 }
 
-/* 수평 타임라인 */
+/* ?�평 ?�?�라??*/
 .horizontal-timeline {
     position: relative;
     padding: 4rem 0 2rem;
 }
 
-/* 연결 트랙 */
+/* ?�결 ?�랙 */
 .timeline-track {
     position: absolute;
     top: calc(4rem + 28px);
@@ -4145,7 +4145,7 @@ body {
     width: 75%;
 }
 
-/* 스텝 카드들 */
+/* ?�텝 카드??*/
 .step-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -4154,7 +4154,7 @@ body {
     z-index: 2;
 }
 
-/* 개별 스텝 카드 */
+/* 개별 ?�텝 카드 */
 .step-card {
     display: flex;
     flex-direction: column;
@@ -4169,7 +4169,7 @@ body {
     transform: translateY(0);
 }
 
-/* 스텝 노드 */
+/* ?�텝 ?�드 */
 .step-node {
     width: 56px;
     height: 56px;
@@ -4241,7 +4241,7 @@ body {
     font-weight: bold;
 }
 
-/* 연도 태그 */
+/* ?�도 ?�그 */
 .step-year-tag {
     text-align: center;
     margin-bottom: 1rem;
@@ -4295,7 +4295,7 @@ body {
     box-shadow: 0 12px 40px rgba(6, 182, 212, 0.15);
 }
 
-/* 카드 헤더 */
+/* 카드 ?�더 */
 .step-card-body .card-header {
     text-align: center;
     margin-bottom: 1.25rem;
@@ -4328,7 +4328,7 @@ body {
     font-weight: 500;
 }
 
-/* 카드 리스트 */
+/* 카드 리스??*/
 .card-list {
     list-style: none;
     padding: 0;
@@ -4370,7 +4370,7 @@ body {
     background: #06b6d4;
 }
 
-/* 하단 슬로건 */
+/* ?�단 ?�로�?*/
 .step-slogan {
     margin-top: 4rem;
     text-align: center;
@@ -4420,7 +4420,7 @@ body {
     color: #fbbf24;
 }
 
-/* 반응형 - 태블릿 */
+/* 반응??- ?�블�?*/
 @media (max-width: 1024px) {
     .step-cards {
         grid-template-columns: repeat(2, 1fr);
@@ -4436,7 +4436,7 @@ body {
     }
 }
 
-/* 반응형 - 모바일 (수직 타임라인으로 전환) */
+/* 반응??- 모바??(?�직 ?�?�라?�으�??�환) */
 @media (max-width: 768px) {
     .evolution-step-section {
         padding: 60px 0;
@@ -4465,7 +4465,7 @@ body {
         padding-left: 50px;
     }
 
-    /* 수직 연결선 */
+    /* ?�직 ?�결??*/
     .step-cards::before {
         content: '';
         position: absolute;
@@ -4989,4 +4989,134 @@ body {
 
 .ai-card-desc {
     @apply text-slate-400 leading-relaxed mb-8;
+}
+
+/* Global Location Section */
+.global-location-section {
+    padding: 8rem 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.location-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.location-header.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.location-main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.location-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+}
+
+/* World Map Container */
+.world-map-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 6rem;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.world-map-container.fade-in-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.world-map-bg {
+    width: 100%;
+    height: 600px;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Location Markers */
+.location-marker {
+    position: absolute;
+    animation: markerPulse 2s ease-in-out infinite;
+}
+
+.korea-marker {
+    top: 42%;
+    right: 18%;
+}
+
+.hungary-marker {
+    top: 35%;
+    left: 50%;
+}
+
+.marker-pin {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.marker-pin:hover {
+    transform: scale(1.1);
+}
+
+.pin-circle {
+    width: 20px;
+    height: 20px;
+    background: #22c55e;
+    border: 4px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+}
+
+.pin-circle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pingAnimation 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pingAnimation {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes markerPulse {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }

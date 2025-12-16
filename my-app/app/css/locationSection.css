@@ -1,0 +1,313 @@
+/* /* Location Info Box */
+.location-info {
+    position: absolute;
+    top: -10px;
+    left: 50px;
+    background: white;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-width: 280px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    pointer-events: auto !important;
+}
+
+.location-marker:hover .location-info {
+    transform: translateX(5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.info-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #22c55e;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.info-company {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.info-company-sub {
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.info-address {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+
+
+@media (max-width: 1024px) {
+    .world-map-container {
+        padding: 2rem 1rem;
+    }
+
+    .korea-marker {
+        top: 32%;
+        right: 15%;
+    }
+
+    .hungary-marker {
+        top: 25%;
+        left: 45%;
+    }
+
+    .location-info {
+        min-width: 240px;
+        font-size: 0.85rem;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .global-location-section {
+        padding: 4rem 0;
+    }
+
+    .location-main-title {
+        font-size: 2rem;
+    }
+
+    .world-map-container {
+        margin-bottom: 3rem;
+    }
+
+    .location-marker {
+        animation: none;
+    }
+
+    .location-info {
+        position: static;
+        opacity: 1;
+        transform: none;
+        margin-top: 1rem;
+        pointer-events: auto;
+    }
+}
+
+/* Hungary marker - info box on the left side */
+.hungary-info {
+    left: auto !important;
+    right: 100% !important;
+    margin-right: 10px !important;
+}
+
+.location-marker:hover .hungary-info {
+    transform: translateX(-5px) !important;
+}
+
+/* Hungary Manager Section - Business Card Style */
+.hungary-manager-section {
+    max-width: 1100px;
+    margin: 0 auto 5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.hungary-manager-section.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.info-label::before {
+    display: none;
+}
+
+.info-value {
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.info-value a {
+    color: #60a5fa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.info-value a:hover {
+    color: #93c5fd;
+    border-bottom-color: #93c5fd;
+}
+
+.separator {
+    margin: 0 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.phone-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.phone-label {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.phone-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
+.phone-label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.role-tag {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: transparent;
+    color: var(--text-primary);
+    border-radius: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.role-tag:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+
+/* Business Card Responsive */
+@media (max-width: 968px) {
+    .manager-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .manager-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+
+    .manager-name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .manager-header {
+        padding: 1.5rem 2rem 1rem;
+    }
+
+    .manager-content {
+        padding: 1.5rem 2rem 2rem;
+    }
+
+    .manager-name {
+        font-size: 1.75rem;
+    }
+
+    .phone-item {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .separator {
+        display: none;
+    }
+}
+
+@media (max-width: 968px) {
+    .manager-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .manager-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+
+    .manager-name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .manager-header {
+        padding: 1.5rem 2rem 1rem;
+    }
+
+    .manager-content {
+        padding: 1.5rem 2rem 2rem;
+    }
+
+    .manager-name {
+        font-size: 1.75rem;
+    }
+
+    .phone-item {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .separator {
+        display: none;
+    }
+}

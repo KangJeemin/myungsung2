@@ -66,7 +66,7 @@ export default function ServicesSection() {
             </p>
           </div>
           <img
-            src="/images/AIPredicted.png"
+            src="https://storage.googleapis.com/myeongseong-homepage-resource/images/AIPredicted.png"
             alt="AI 예측 분석"
             className="service-image"
           />
@@ -83,7 +83,7 @@ export default function ServicesSection() {
           </div>
           <div className="service-image-wrapper-gray">
             <img
-              src="/images/sensor_img1.png"
+              src="https://storage.cloud.google.com/myeongseong-homepage-resource/images/sensor_img1.png"
               alt="로봇 자동화"
               className="service-image service-image-white-bg"
             />

@@ -68,3 +68,6 @@ LICENSE
 .editorconfig
 .eslintrc.json
 .prettierrc
+
+public/images
+public/videos

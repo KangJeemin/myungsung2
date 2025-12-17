@@ -44,5 +44,7 @@ next-env.d.ts
 # public   
 
 /public/images
+/public/videos
+
 /package-lock.json
 /VIDEO_SETUP.md

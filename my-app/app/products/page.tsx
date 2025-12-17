@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './products.css';
+import SmartAlarmSection from './components/smartAlarmSection';
+import CommunicationModuleSection from './components/CommunicationModuleSection';
 
 export default function ProductsPage() {
   const [activeTab, setActiveTab] = useState('sogini-ai');
@@ -240,13 +242,13 @@ export default function ProductsPage() {
                 className={`product-tab ${activeTab === 'sensor' ? 'active' : ''}`}
                 onClick={() => setActiveTab('sensor')}
               >
-                통합모듈
+                스마트 알람센서
               </button>
               <button
                 className={`product-tab ${activeTab === 'vision' ? 'active' : ''}`}
                 onClick={() => setActiveTab('vision')}
               >
-                비전 검사
+                통신모듈
               </button>
               <button
                 className={`product-tab ${activeTab === 'robot' ? 'active' : ''}`}
@@ -886,6 +888,10 @@ export default function ProductsPage() {
               </div>
             </div>
           </section>
+        ) : activeTab === 'sensor' ? (
+          <SmartAlarmSection />
+        ) : activeTab === 'vision' ? (
+          <CommunicationModuleSection />
         ) : (
           <section className="product-detail-section">
             <div className="container">

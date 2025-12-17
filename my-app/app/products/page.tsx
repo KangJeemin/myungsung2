@@ -234,13 +234,13 @@ export default function ProductsPage() {
                 className={`product-tab ${activeTab === 'predictive' ? 'active' : ''}`}
                 onClick={() => setActiveTab('predictive')}
               >
-                예지보전
+                스마트 진동센서
               </button>
               <button
                 className={`product-tab ${activeTab === 'sensor' ? 'active' : ''}`}
                 onClick={() => setActiveTab('sensor')}
               >
-                스마트 센서
+                통합모듈
               </button>
               <button
                 className={`product-tab ${activeTab === 'vision' ? 'active' : ''}`}
@@ -540,6 +540,118 @@ export default function ProductsPage() {
               </div>
             </div>
           </section>
+        ) : activeTab === 'predictive' ? (
+          <section className="sogini-custom-section">
+            <div className="sogini-layout">
+              {/* 왼쪽 이미지 영역 */}
+              <div className="sogini-left-panel">
+                <div className="sogini-image-wrapper sensor-mode">
+                  <img src="/images/sensor_img1.png" alt="Smart Sensor" />
+                  <div className="sogini-image-overlay"></div>
+                </div>
+              </div>
+
+              {/* 오른쪽 콘텐츠 영역 */}
+              <div className="sogini-right-panel">
+                <div className="sogini-content-container">
+                  <h2 className="sogini-title">스마트 진동 센서</h2>
+                  <p style={{ marginBottom: '2rem', color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', lineHeight: '1.6' }}>
+                    <strong style={{ color: '#fff', fontSize: '1.2rem', display: 'block', marginBottom: '0.5rem' }}>쏘지니 스마트 센서란?</strong>
+                    쏘지니 스마트 센서는 스마트팩토리의 현장에서<br />
+                    온도 및 진동 상태를 동시 모니터링 가능한 센서입니다.
+                  </p>
+
+                  <div className="sogini-features-list">
+                    <div className="sogini-feature-item">
+                      <span className="sogini-feature-number">01</span>
+                      <div className="sogini-feature-text">
+                        <h3>가속도 센서</h3>
+                        <p>가속도 센서를 이용해 진동 변화 감지</p>
+                      </div>
+                    </div>
+
+                    <div className="sogini-feature-item">
+                      <span className="sogini-feature-number">02</span>
+                      <div className="sogini-feature-text">
+                        <h3>극한 환경</h3>
+                        <p>강한 진동, 고온환경에서 사용 가능</p>
+                      </div>
+                    </div>
+
+                    <div className="sogini-feature-item">
+                      <span className="sogini-feature-number">03</span>
+                      <div className="sogini-feature-text">
+                        <h3>원활한 성능</h3>
+                        <p>노이즈 환경에서도 원활히 유지되는 성능</p>
+                      </div>
+                    </div>
+
+                    <div className="sogini-feature-item">
+                      <span className="sogini-feature-number">04</span>
+                      <div className="sogini-feature-text">
+                        <h3>실시간 측정</h3>
+                        <p>진동과 온도를 실시간으로 측정해주는 센서</p>
+                      </div>
+                    </div>
+
+                    <div className="sogini-feature-item">
+                      <span className="sogini-feature-number">05</span>
+                      <div className="sogini-feature-text">
+                        <h3>DC 변환 출력</h3>
+                        <p>아날로그 신호 진동 출력을 DC로 변환하여 출력</p>
+                      </div>
+                    </div>
+
+                    <div className="sogini-feature-item">
+                      <span className="sogini-feature-number">06</span>
+                      <div className="sogini-feature-text">
+                        <h3>3가지 축 진동</h3>
+                        <p>X축, Y축, Z축 진동 감지</p>
+                      </div>
+                    </div>
+
+                    <div className="sogini-feature-item">
+                      <span className="sogini-feature-number">07</span>
+                      <div className="sogini-feature-text">
+                        <h3>미세진동 감지</h3>
+                        <p>미세진동 감지 1mg</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="sogini-detailed-benefits">
+              <div className="container">
+                <div className="sogini-benefits-grid">
+                  <div className="benefits-title-col">
+                    <h2>쏘지니 스마트 센서<br />적용 시 좋은 점</h2>
+                  </div>
+                  <div className="benefits-list-col">
+                    <ol className="sensor-benefits-list">
+                      <li>당사는 제어공사 가능 업체로서 Application DB, 설치 시운전, 제어, 전기공사, HMI 모니터링, 시운전, 유지관리 등 대응가능</li>
+                      <li>범용 HMI를 활용한 모니터링 가능</li>
+                      <li>PLC를 통한 모니터링에 최적화 개발</li>
+                      <li>최저 투자금액으로 최적의 모니터링, 알람 가능</li>
+                      <li>최소 납기 대응, 현장 상황에 따른 개발 대응 가능</li>
+                      <li>설비 구간 별 센서 설치 후 온도 및 진동 상태 동시 모니터링</li>
+                      <li>합리적인 가격으로 센서 적용 가능</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div className="sogini-case-section">
+                  <div className="case-image-wrapper">
+                    <img src="/images/sensor_img1.png" alt="Aluminum Case" />
+                  </div>
+                  <div className="case-content">
+                    <h3>알루미늄 방수 케이스</h3>
+                    <p>진동센서의 보호를 위해 알루미늄으로 제작한 방수 케이스 진동센서 제품입니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         ) : (
           <section className="product-detail-section">
             <div className="container">
@@ -594,6 +706,6 @@ export default function ProductsPage() {
       </main>
 
       <Footer />
-    </div>
+    </div >
   );
 }

@@ -541,7 +541,7 @@ export default function ProductsPage() {
             </div>
           </section>
         ) : activeTab === 'predictive' ? (
-          <section className="sogini-custom-section">
+          <section className="sogini-custom-section light-mode">
             <div className="sogini-layout">
               {/* 왼쪽 이미지 영역 */}
               <div className="sogini-left-panel">
@@ -555,11 +555,11 @@ export default function ProductsPage() {
               <div className="sogini-right-panel">
                 <div className="sogini-content-container">
                   <h2 className="sogini-title">스마트 진동 센서</h2>
-                  <p style={{ marginBottom: '2rem', color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem', lineHeight: '1.6' }}>
-                    <strong style={{ color: '#fff', fontSize: '1.2rem', display: 'block', marginBottom: '0.5rem' }}>쏘지니 스마트 센서란?</strong>
+                  <div className="sensor-description">
+                    <strong>쏘지니 스마트 센서란?</strong>
                     쏘지니 스마트 센서는 스마트팩토리의 현장에서<br />
                     온도 및 진동 상태를 동시 모니터링 가능한 센서입니다.
-                  </p>
+                  </div>
 
                   <div className="sogini-features-list">
                     <div className="sogini-feature-item">
@@ -647,6 +647,240 @@ export default function ProductsPage() {
                   <div className="case-content">
                     <h3>알루미늄 방수 케이스</h3>
                     <p>진동센서의 보호를 위해 알루미늄으로 제작한 방수 케이스 진동센서 제품입니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Specification Table Section */}
+            <div className="sensor-specification-section">
+              <div className="container">
+                <div className="spec-table-wrapper">
+                  <div className="spec-table-header">
+                    <h2>SPECIFICATION</h2>
+                  </div>
+
+                  <div className="spec-table-content">
+                    <div className="spec-table-row">
+                      <div className="spec-table-label">MEASURING RANGE (g)</div>
+                      <div className="spec-table-value">1g (2g~32g : 주문생산)</div>
+                    </div>
+
+                    <div className="spec-table-row">
+                      <div className="spec-table-label">SENSITIVITY</div>
+                      <div className="spec-table-value">± 1mg (X축, Y축, Z축)</div>
+                    </div>
+
+                    <div className="spec-table-row">
+                      <div className="spec-table-label">FREQUENCY RANGE</div>
+                      <div className="spec-table-value">~1.6KHz</div>
+                    </div>
+
+                    <div className="spec-table-row">
+                      <div className="spec-table-label">RESONANCE FREQUENCY</div>
+                      <div className="spec-table-value">5.5KHz</div>
+                    </div>
+
+                    <div className="spec-table-row">
+                      <div className="spec-table-label">BANDWIDTH (Hz)</div>
+                      <div className="spec-table-value">50Hz, 100Hz</div>
+                    </div>
+
+                    <div className="spec-table-row">
+                      <div className="spec-table-label">POWER</div>
+                      <div className="spec-table-value">INPUT VOLTAGE 24±4VDC TYPICAL 12VDC @ 30mA 이하</div>
+                    </div>
+
+                    <div className="spec-table-row">
+                      <div className="spec-table-label">HOUSING</div>
+                      <div className="spec-table-value">
+                        <div>ALUMINIUM 과 ABS PLASTIC, IP65, IP66, EPOXY</div>
+                        <div style={{ marginTop: '0.25rem' }}>충진 또는 방수 코팅</div>
+                      </div>
+                    </div>
+
+                    <div className="spec-table-row">
+                      <div className="spec-table-label">OPERATING TEMPERATURE</div>
+                      <div className="spec-table-value">-30℃ ~ 100℃</div>
+                    </div>
+
+                    <div className="spec-table-row">
+                      <div className="spec-table-label">WEIGHT</div>
+                      <div className="spec-table-value">200g 이하</div>
+                    </div>
+
+                    <div className="spec-table-row">
+                      <div className="spec-table-label">OUTPUT</div>
+                      <div className="spec-table-value">0 ~ 5.0V (전동, 온도 출력)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* PIN ASSIGN Section */}
+            <div className="sensor-pin-assign-section">
+              <div className="container">
+                <div className="pin-assign-layout">
+                  {/* Left: Sensor Diagram */}
+                  <div className="pin-diagram-wrapper">
+                    <img src="/images/sensor_pin_diagram.png" alt="Sensor Pin Diagram" />
+                  </div>
+
+                  {/* Right: Pin Assignment Table */}
+                  <div className="pin-table-wrapper">
+                    <div className="pin-table-header">
+                      <h2>PIN ASSIGN</h2>
+                    </div>
+
+                    <div className="pin-table-content">
+                      <div className="pin-table-row">
+                        <div className="pin-color-label">
+                          <span className="pin-color-dot red"></span>
+                          <span className="pin-color-name">RED</span>
+                        </div>
+                        <div className="pin-description">Input Voltage (+20V ~ +28V)</div>
+                      </div>
+
+                      <div className="pin-table-row">
+                        <div className="pin-color-label">
+                          <span className="pin-color-dot black"></span>
+                          <span className="pin-color-name">BLACK</span>
+                        </div>
+                        <div className="pin-description">GND</div>
+                      </div>
+
+                      <div className="pin-table-row">
+                        <div className="pin-color-label">
+                          <span className="pin-color-dot white"></span>
+                          <span className="pin-color-name">WHITE</span>
+                        </div>
+                        <div className="pin-description">Temperature Analog Voltage</div>
+                      </div>
+
+                      <div className="pin-table-row">
+                        <div className="pin-color-label">
+                          <span className="pin-color-dot green"></span>
+                          <span className="pin-color-name">GREEN</span>
+                        </div>
+                        <div className="pin-description">Vibration Analog Voltage</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Sensor Outline Section */}
+            <div className="sensor-outline-section">
+              <div className="container">
+                <div className="outline-header">
+                  <h2>OUTLINE : 쏘지니 센서</h2>
+                </div>
+
+                <div className="outline-image-container">
+                  {/* Single large sensor dimension image */}
+                  <div className="outline-image-wrapper">
+                    <img src="/images/sensor_outline.png" alt="Sensor Outline Dimensions" />
+                  </div>
+                </div>
+              </div>
+            </div> {/* Sensor Outline Section */}
+            <div className="sensor-outline-section">
+              <div className="container">
+                <div className="outline-header">
+                  <h2>OUTLINE : 알루미늄 방수 케이스</h2>
+                </div>
+
+                <div className="outline-image-container">
+                  {/* Single large sensor dimension image */}
+                  <div className="outline-image-wrapper">
+                    <img src="/images/sensor_outline.png" alt="Sensor Outline Dimensions" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Product Selection Guide Section */}
+            <div className="product-guide-section">
+              <div className="container">
+                <div className="guide-header">
+                  <h2>제품선정 GUIDE</h2>
+                </div>
+
+                <div className="guide-code-container">
+                  <div className="code-segment">
+                    <div className="code-label top">제조사</div>
+                    <div className="code-value">MS</div>
+                  </div>
+
+                  <div className="code-separator">-</div>
+
+
+
+                  <div className="code-separator">-</div>
+
+                  <div className="code-segment">
+                    <div className="code-label top">Case 재질<br />(P : Plastic, AL : Aluminium)</div>
+                    <div className="code-value">P</div>
+                  </div>
+
+                  <div className="code-separator">-</div>
+
+                  <div className="code-segment">
+                    <div className="code-label top">Version NO.</div>
+                    <div className="code-value">001</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Major Application Cases Section */}
+            <div className="application-cases-section">
+              <div className="container">
+                <div className="application-header">
+                  <h2>주 요 적 용 사 례</h2>
+                  <p>* 모터불량 예측(생산 모니터링), Alarm 일보, 불량 Top10분석, Overhaul 주기관리</p>
+                </div>
+
+                <div className="application-list">
+                  {/* Case 1: 압출기 */}
+                  <div className="application-item">
+                    <h3 className="application-title">압출기</h3>
+                    <div className="application-images">
+                      <div className="app-image-wrapper">
+                        <img src="/images/application_extruder_1.png" alt="압출기 적용 사례 1" />
+                      </div>
+                      <div className="app-image-wrapper">
+                        <img src="/images/application_extruder_2.png" alt="압출기 적용 사례 2" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Case 2: 와인더 */}
+                  <div className="application-item">
+                    <h3 className="application-title">와인더</h3>
+                    <div className="application-images">
+                      <div className="app-image-wrapper">
+                        <img src="/images/application_winder_1.png" alt="와인더 적용 사례 1" />
+                      </div>
+                      <div className="app-image-wrapper">
+                        <img src="/images/application_winder_2.png" alt="와인더 적용 사례 2" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Case 3: 믹서 */}
+                  <div className="application-item">
+                    <h3 className="application-title">믹서</h3>
+                    <div className="application-images">
+                      <div className="app-image-wrapper">
+                        <img src="/images/application_mixer_1.png" alt="믹서 적용 사례 1" />
+                      </div>
+                      <div className="app-image-wrapper">
+                        <img src="/images/application_mixer_2.png" alt="믹서 적용 사례 2" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

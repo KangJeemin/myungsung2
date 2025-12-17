@@ -672,9 +672,9 @@ body {
     height: 400px;
     border-radius: 20px;
     object-fit: contain;
-    background: var(--light-bg);
-    padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
 }
 
 .service-image-small {
@@ -690,8 +690,8 @@ body {
 .service-image-wrapper-gray {
     flex: 1;
     max-width: calc(50% - 2rem);
-    background: var(--light-bg);
-    padding: 2.5rem;
+    background: transparent;
+    padding: 0;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -702,9 +702,9 @@ body {
     flex: none;
     max-width: 100%;
     height: 400px;
-    padding: 2.5rem;
-    background: var(--white);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
     border-radius: 15px;
 }
 
@@ -4792,7 +4792,7 @@ body {
 
 /* AI Feature Section Styles */
 .ai-section {
-    @apply py-24 bg-[#0a0f1c] relative overflow-hidden text-white font-sans;
+    @apply py-24 bg-white relative overflow-hidden text-[#1e293b] font-sans;
 }
 
 .ai-bg-blob {
@@ -4828,7 +4828,7 @@ body {
 }
 
 .ai-description {
-    @apply text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed;
+    @apply text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed;
 }
 
 .ai-grid {
@@ -4836,7 +4836,7 @@ body {
 }
 
 .ai-card {
-    @apply relative bg-[#131c2e]/80 border border-white/10 rounded-3xl overflow-hidden transition-all duration-500;
+    @apply relative bg-white border border-gray-200 rounded-3xl overflow-hidden transition-all duration-500 shadow-lg;
 }
 
 .ai-card-hover-cyan {
@@ -4878,7 +4878,7 @@ body {
 }
 
 .ai-image-gradient {
-    @apply absolute inset-0 bg-gradient-to-t from-[#131c2e] via-transparent to-transparent;
+    @apply absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent;
 }
 
 .ai-card-content {
@@ -4886,7 +4886,7 @@ body {
 }
 
 .ai-card-title-en {
-    @apply text-2xl font-bold text-white mb-3;
+    @apply text-2xl font-bold text-[#1e293b] mb-3;
 }
 
 .ai-card-title-kr {
@@ -4894,7 +4894,7 @@ body {
 }
 
 .ai-card-desc {
-    @apply text-slate-400 leading-relaxed mb-8;
+    @apply text-slate-600 leading-relaxed mb-8;
 }
 
 /* Global Location Section */

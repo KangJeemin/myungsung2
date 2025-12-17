@@ -6,9 +6,9 @@ const SmartAlarmSection = () => {
             <div className="sogini-layout">
                 {/* 왼쪽 이미지 영역 */}
                 <div className="sogini-left-panel">
-                    <div className="sogini-image-wrapper sensor-mode">
+                    <div className="sogini-image-wrapper sensor-mode" style={{ width: '80%', margin: '0 auto' }}>
                         {/* 알람 센서 이미지가 있다면 교체 필요. 현재는 진동센서 이미지 예시 사용 */}
-                        <img src="/images/sensor_img1.png" alt="Smart Alarm Sensor" />
+                        <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/sogini_alarm.png" alt="Smart Alarm Sensor" />
                         <div className="sogini-image-overlay"></div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ const SmartAlarmSection = () => {
                         </div>
                         <div className="front-panel-image">
                             {/* 이미지 플레이스홀더 */}
-                            <img src="/images/productPage/front_panel_diagram.png" alt="전면판 각부 설명" referrerPolicy="no-referrer" onError={(e) => { e.currentTarget.src = '/images/sensor_img1.png' }} />
+                            <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/sogini_alarm_front.png" alt="전면판 각부 설명" referrerPolicy="no-referrer" onError={(e) => { e.currentTarget.src = '/images/sensor_img1.png' }} />
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@ const SmartAlarmSection = () => {
                         {/* Step 1 */}
                         <div className="step-item">
                             <div className="step-image-container">
-                                <img src="/images/sensor_img1.png" alt="Step 1 Key Switch" />
+                                <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/sogini_alarm_step1.png" alt="Step 1 Key Switch" />
                             </div>
                             <div className="step-content">
                                 <span className="step-number">1</span>
@@ -120,7 +120,7 @@ const SmartAlarmSection = () => {
                         {/* Step 3 */}
                         <div className="step-item">
                             <div className="step-image-container">
-                                <img src="/images/sensor_img1.png" alt="Step 3 Mode DIP" />
+                                <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/sogini_alarm_step2.png" alt="Step 3 Mode DIP" />
                             </div>
                             <div className="step-content">
                                 <span className="step-number">3</span>
@@ -133,7 +133,7 @@ const SmartAlarmSection = () => {
                         {/* Step 4 */}
                         <div className="step-item">
                             <div className="step-image-container">
-                                <img src="/images/sensor_img1.png" alt="Step 4 Binary DIP" />
+                                <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/sogini_alarm_step3.png" alt="Step 4 Binary DIP" />
                             </div>
                             <div className="step-content">
                                 <span className="step-number">4</span>
@@ -171,7 +171,7 @@ const SmartAlarmSection = () => {
                             <div className="step-content">
                                 <span className="step-number">7</span>
                                 <p className="step-desc">
-                                    전원 동작상태가 되면 "Status"의<br />
+                                    "Status"의
                                     LED에 빨간불이 들어오고, 알림음이 재생
                                 </p>
                             </div>
@@ -364,7 +364,7 @@ const SmartAlarmSection = () => {
                 <div className="container">
                     <h2 className="system-connection-title">SYSTEM CONNECTION</h2>
                     <div className="system-connection-image">
-                        <img src="/images/productPage/system_connection_diagram.png" alt="System Connection Diagram" onError={(e) => { e.currentTarget.src = '/images/sensor_img1.png' }} />
+                        <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/sogini_alarm_application.png" alt="System Connection Diagram" onError={(e) => { e.currentTarget.src = '/images/sensor_img1.png' }} />
                     </div>
                 </div>
             </div >
@@ -437,7 +437,7 @@ const SmartAlarmSection = () => {
                     <div className="pin-layout">
                         {/* Left: Image */}
                         <div className="pin-image-area">
-                            <img src="/images/productPage/pin_assign_diagram_alarm.png" alt="PIN ASSIGN Diagram" onError={(e) => { e.currentTarget.src = '/images/sensor_img1.png' }} />
+                            <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/sogini_alarm_pin_assign.png" alt="PIN ASSIGN Diagram" onError={(e) => { e.currentTarget.src = '/images/sensor_img1.png' }} />
                         </div>
 
                         {/* Right: Content */}
@@ -468,7 +468,7 @@ const SmartAlarmSection = () => {
                 <div className="outline-image-container">
                     {/* Single large sensor dimension image */}
                     <div className="outline-image-wrapper">
-                        <img src="/images/sensor_outline.png" alt="Sensor Outline Dimensions" />
+                        <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/sogini_alarm_outline.png" alt="Sensor Outline Dimensions" />
                     </div>
                 </div>
             </div>

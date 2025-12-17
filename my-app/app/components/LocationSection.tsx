@@ -45,7 +45,7 @@ export default function LocationSection() {
 
         {/* World Map with Markers */}
         <div className={`world-map-container ${isVisible ? 'fade-in-active' : ''}`}>
-          <img src="/images/world_map1.png" alt="World Map" className="world-map-bg" />
+          <img src="/images/map.png" alt="World Map" className="world-map-bg" />
 
           {/* Korea Marker */}
           <div className="location-marker korea-marker">

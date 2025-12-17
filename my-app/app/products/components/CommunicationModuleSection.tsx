@@ -6,9 +6,9 @@ const CommunicationModuleSection = () => {
             <div className="sogini-layout">
                 {/* 왼쪽 이미지 영역 */}
                 <div className="sogini-left-panel">
-                    <div className="sogini-image-wrapper">
+                    <div className="sogini-image-wrapper sensor-mode" style={{ width: '80%', margin: '0 auto' }}>
                         {/* Placeholder image, user can update later */}
-                        <img src="/images/productPage/communication_module_main.png" alt="Communication Module" onError={(e) => { e.currentTarget.src = '/images/sensor_img1.png' }} />
+                        <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/sogini_comunicationModule.png" alt="Communication Module" onError={(e) => { e.currentTarget.src = '/images/sensor_img1.png' }} />
                         <div className="sogini-image-overlay"></div>
                     </div>
                 </div>
@@ -196,9 +196,9 @@ const CommunicationModuleSection = () => {
                     <div className="outline-image-container">
                         <div className="outline-image-wrapper">
                             <img
-                                src="/images/productPage/communication_outline_connection.png"
+                                src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/sogini_comunicationModule_multi.png"
                                 alt="다채널 통신 모듈 제품 외형 및 연결 정보"
-                                onError={(e) => { e.currentTarget.src = '/images/sensor_outline.png' }}
+                                onError={(e) => { e.currentTarget.src = 'https://storage.googleapis.com/myeongseong-homepage-resource   /images/products/sogini_comunicationModule_multi.png' }}
                             />
                         </div>
                     </div>

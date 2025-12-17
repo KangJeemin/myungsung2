@@ -38,7 +38,7 @@ export default function AboutSection() {
 
         <div className={`about-image-container ${isVisible ? 'fade-in-active' : ''}`}>
           <img
-            src="https://storage.cloud.google.com/myeongseong-homepage-resource/images/About.png"
+            src="https://storage.googleapis.com/myeongseong-homepage-resource/images/About.png"
             alt="About Us"
             className="about-image"
           />

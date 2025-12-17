@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import './products.css';
 import SmartAlarmSection from './components/smartAlarmSection';
 import CommunicationModuleSection from './components/CommunicationModuleSection';
+import SoginiViewSection from './components/SoginiViewSection';
 
 export default function ProductsPage() {
   const [activeTab, setActiveTab] = useState('sogini-ai');
@@ -254,7 +255,7 @@ export default function ProductsPage() {
                 className={`product-tab ${activeTab === 'robot' ? 'active' : ''}`}
                 onClick={() => setActiveTab('robot')}
               >
-                로봇 자동화
+                쏘지니 뷰
               </button>
             </div>
           </div>
@@ -266,8 +267,8 @@ export default function ProductsPage() {
             <div className="sogini-layout">
               {/* 왼쪽 이미지 영역 */}
               <div className="sogini-left-panel">
-                <div className="sogini-image-wrapper">
-                  <img src="/images/productPage/mainAI.png" alt="Sogini AI Brain" />
+                <div className="sogini-image-wrapper" style={{ maxWidth: '80%', margin: '0 0 0 auto', background: 'transparent', boxShadow: 'none' }}>
+                  <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/ai_brain.png" alt="Sogini AI Brain" />
                   <div className="sogini-image-overlay"></div>
                 </div>
               </div>
@@ -350,7 +351,7 @@ export default function ProductsPage() {
                       <li>데이터 기록 작업</li>
                     </ul>
                     <div className="innovation-image">
-                      <img src="/images/productPage/person1.png" alt="기존 모니터링 방식" />
+                      <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/person1.png" alt="기존 모니터링 방식" />
                     </div>
                   </div>
 
@@ -364,7 +365,7 @@ export default function ProductsPage() {
                       <li>사람은 검증과 조치에만 집중</li>
                     </ul>
                     <div className="innovation-image">
-                      <img src="/images/productPage/person2.png" alt="쏘지니 AI 방식" />
+                      <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/person2.png" alt="쏘지니 AI 방식" />
                     </div>
                   </div>
                 </div>
@@ -477,7 +478,7 @@ export default function ProductsPage() {
             {/* AI 예지보전 벤치마크 섹션 */}
             <div className="sogini-benchmark">
               <div className="benchmark-hero-image">
-                <img src="/images/ai_tech_resources_bg.png" alt="AI Benchmark Background" />
+                <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/ai_tech_resources_bg.png" alt="AI Benchmark Background" />
                 <div className="benchmark-overlay"></div>
               </div>
 
@@ -547,8 +548,8 @@ export default function ProductsPage() {
             <div className="sogini-layout">
               {/* 왼쪽 이미지 영역 */}
               <div className="sogini-left-panel">
-                <div className="sogini-image-wrapper sensor-mode">
-                  <img src="/images/sensor_img1.png" alt="Smart Sensor" />
+                <div className="sogini-image-wrapper sensor-mode" style={{ width: '80%', margin: '0 auto' }}>
+                  <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/sensor_img1.png" alt="Smart Sensor" />
                   <div className="sogini-image-overlay"></div>
                 </div>
               </div>
@@ -644,7 +645,7 @@ export default function ProductsPage() {
 
                 <div className="sogini-case-section">
                   <div className="case-image-wrapper">
-                    <img src="/images/sensor_img1.png" alt="Aluminum Case" />
+                    <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/alcase.png" alt="Aluminum Case" />
                   </div>
                   <div className="case-content">
                     <h3>알루미늄 방수 케이스</h3>
@@ -726,7 +727,7 @@ export default function ProductsPage() {
                 <div className="pin-assign-layout">
                   {/* Left: Sensor Diagram */}
                   <div className="pin-diagram-wrapper">
-                    <img src="/images/sensor_pin_diagram.png" alt="Sensor Pin Diagram" />
+                    <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/vibrate_pin.png" alt="Sensor Pin Diagram" />
                   </div>
 
                   {/* Right: Pin Assignment Table */}
@@ -783,7 +784,7 @@ export default function ProductsPage() {
                 <div className="outline-image-container">
                   {/* Single large sensor dimension image */}
                   <div className="outline-image-wrapper">
-                    <img src="/images/sensor_outline.png" alt="Sensor Outline Dimensions" />
+                    <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/vibrate_outline.png" alt="Sensor Outline Dimensions" />
                   </div>
                 </div>
               </div>
@@ -797,7 +798,7 @@ export default function ProductsPage() {
                 <div className="outline-image-container">
                   {/* Single large sensor dimension image */}
                   <div className="outline-image-wrapper">
-                    <img src="/images/sensor_outline.png" alt="Sensor Outline Dimensions" />
+                    <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/vibrate_al_outline.png" alt="Sensor Outline Dimensions" />
                   </div>
                 </div>
               </div>
@@ -812,26 +813,35 @@ export default function ProductsPage() {
 
                 <div className="guide-code-container">
                   <div className="code-segment">
-                    <div className="code-label top">제조사</div>
+                    <div className="code-label top"></div>
                     <div className="code-value">MS</div>
-                  </div>
-
-                  <div className="code-separator">-</div>
-
-
-
-                  <div className="code-separator">-</div>
-
-                  <div className="code-segment">
-                    <div className="code-label top">Case 재질<br />(P : Plastic, AL : Aluminium)</div>
-                    <div className="code-value">P</div>
+                    <div className="code-label bottom">제조사</div>
                   </div>
 
                   <div className="code-separator">-</div>
 
                   <div className="code-segment">
-                    <div className="code-label top">Version NO.</div>
-                    <div className="code-value">001</div>
+                    <div className="code-label top">진동방향</div>
+                    <div className="code-value underline">VXYZ</div>
+                    <div className="code-label bottom" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
+                      <span>V : vibration</span>
+                      <span>VT : vibration & temperature</span>
+                    </div>
+                  </div>
+
+                  <div className="code-separator">-</div>
+
+                  <div className="code-segment">
+                    <div className="code-label top">Case 재질<br />(P : Plastic, AL : Aluminum)</div>
+                    <div className="code-value underline">P</div>
+                  </div>
+
+                  <div className="code-separator">-</div>
+
+                  <div className="code-segment">
+                    <div className="code-label top"></div>
+                    <div className="code-value underline">001</div>
+                    <div className="code-label bottom">Version NO.</div>
                   </div>
                 </div>
               </div>
@@ -851,10 +861,10 @@ export default function ProductsPage() {
                     <h3 className="application-title">압출기</h3>
                     <div className="application-images">
                       <div className="app-image-wrapper">
-                        <img src="/images/application_extruder_1.png" alt="압출기 적용 사례 1" />
+                        <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/extruder1.png" alt="압출기 적용 사례 1" />
                       </div>
                       <div className="app-image-wrapper">
-                        <img src="/images/application_extruder_2.png" alt="압출기 적용 사례 2" />
+                        <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/extruder2.png" alt="압출기 적용 사례 2" />
                       </div>
                     </div>
                   </div>
@@ -864,10 +874,10 @@ export default function ProductsPage() {
                     <h3 className="application-title">와인더</h3>
                     <div className="application-images">
                       <div className="app-image-wrapper">
-                        <img src="/images/application_winder_1.png" alt="와인더 적용 사례 1" />
+                        <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/winder1.png" alt="와인더 적용 사례 1" />
                       </div>
                       <div className="app-image-wrapper">
-                        <img src="/images/application_winder_2.png" alt="와인더 적용 사례 2" />
+                        <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/winder2.png" alt="와인더 적용 사례 2" />
                       </div>
                     </div>
                   </div>
@@ -877,10 +887,10 @@ export default function ProductsPage() {
                     <h3 className="application-title">믹서</h3>
                     <div className="application-images">
                       <div className="app-image-wrapper">
-                        <img src="/images/application_mixer_1.png" alt="믹서 적용 사례 1" />
+                        <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/mixer1.png" alt="믹서 적용 사례 1" />
                       </div>
                       <div className="app-image-wrapper">
-                        <img src="/images/application_mixer_2.png" alt="믹서 적용 사례 2" />
+                        <img src="https://storage.googleapis.com/myeongseong-homepage-resource/images/products/mixer2.png" alt="믹서 적용 사례 2" />
                       </div>
                     </div>
                   </div>
@@ -892,6 +902,8 @@ export default function ProductsPage() {
           <SmartAlarmSection />
         ) : activeTab === 'vision' ? (
           <CommunicationModuleSection />
+        ) : activeTab === 'robot' ? (
+          <SoginiViewSection />
         ) : (
           <section className="product-detail-section">
             <div className="container">

@@ -31,28 +31,28 @@ export default function PartnerSection() {
 
   // 파트너 로고 리스트 - 두 줄로 나누기
   const topLogos = [
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/samsung.png', alt: '삼성' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/LG_Chemical.png', alt: 'LG화학' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/lg_display_logo_1424x277.png', alt: 'LG디스플레이' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/LG_Energy_Solution.png', alt: 'LG에너지솔루션' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/SK_innovation.png', alt: 'SK이노베이션' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/posco.png', alt: 'POSCO' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/hyundai_LNC.png', alt: '현대' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/hanwha_Solution.jpg', alt: '한화솔루션' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/hanwha-techwin.png', alt: '한화테크윈' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/LS_ELECTRIC.png.png', alt: 'LS ELECTRIC' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/samsung.png', alt: '삼성' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/LG_Chemical.png', alt: 'LG화학' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/lg_display_logo_1424x277.png', alt: 'LG디스플레이' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/LG_Energy_Solution.png', alt: 'LG에너지솔루션' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/SK_innovation.png', alt: 'SK이노베이션' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/posco.png', alt: 'POSCO' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/hyundai_LNC.png', alt: '현대' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/hanwha_Solution.jpg', alt: '한화솔루션' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/hanwha-techwin.png', alt: '한화테크윈' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/LS_ELECTRIC.png.png', alt: 'LS ELECTRIC' },
   ];
 
   const bottomLogos = [
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/ecopro_logo.png', alt: '에코프로' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/shinsung.png', alt: '신성이앤지' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/sungdo.png', alt: '성도이엔지' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/TORAY.png', alt: '도레이' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/DOW.png', alt: 'DOW' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/SAMYANG.jpg', alt: '삼양' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/enchem.png', alt: '엔켐' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/jogwang.webp', alt: '조광' },
-    { src: 'https://storage.cloud.google.com/myeongseong-homepage-resource/images/partner/DEVICE.png', alt: 'DEVICE' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/ecopro_logo.png', alt: '에코프로' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/shinsung.png', alt: '신성이앤지' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/sungdo.png', alt: '성도이엔지' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/TORAY.png', alt: '도레이' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/DOW.png', alt: 'DOW' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/SAMYANG.jpg', alt: '삼양' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/enchem.png', alt: '엔켐' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/jogwang.webp', alt: '조광' },
+    { src: 'https://storage.googleapis.com/myeongseong-homepage-resource/images/partner/DEVICE.png', alt: 'DEVICE' },
   ];
 
   const allLogos = [...topLogos, ...bottomLogos];

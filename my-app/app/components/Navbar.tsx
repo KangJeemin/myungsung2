@@ -67,9 +67,9 @@ export default function Navbar() {
         };
       } else {
         return {
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          background: 'rgba(255, 255, 255, 0.98)',
           boxShadow: 'none',
-          backdropFilter: 'none'
+          backdropFilter: 'blur(10px)'
         };
       }
     } else {
@@ -92,30 +92,21 @@ export default function Navbar() {
           <Link
             href="/"
             style={{
-              color: isGrewCampaignPage ? (scrolled ? 'var(--primary-color)' : '#ffffff') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'var(--primary-color)' : '#ffffff') : '#ffffff'
+              color: isProductsPage ? 'var(--primary-color)' : (isGrewCampaignPage ? (scrolled ? 'var(--primary-color)' : '#ffffff') : (scrolled ? 'var(--primary-color)' : '#ffffff'))
             }}
           >
             Myeongseong
           </Link>
         </div>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
+
           <li>
-            <a
-              href="#top"
-              onClick={(e) => scrollToSection(e, 'top')}
-              style={{ color: isGrewCampaignPage ? (scrolled ? 'var(--text-primary)' : '#ffffff') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'var(--text-primary)' : '#ffffff') : '#ffffff' }}
-            >
-              {t('nav.company')}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#services"
-              onClick={(e) => scrollToSection(e, '#services')}
-              style={{ color: isGrewCampaignPage ? (scrolled ? 'var(--text-primary)' : '#ffffff') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'var(--text-primary)' : '#ffffff') : '#ffffff' }}
+            <Link
+              href="/products"
+              style={{ color: isProductsPage ? 'var(--text-primary)' : (isGrewCampaignPage ? (scrolled ? 'var(--text-primary)' : '#ffffff') : (scrolled ? 'var(--text-primary)' : '#ffffff')) }}
             >
               {t('nav.products')}
-            </a>
+            </Link>
           </li>
           <li
             className="language-selector"
@@ -131,7 +122,7 @@ export default function Navbar() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                style={{ color: isGrewCampaignPage ? (scrolled ? 'var(--text-primary)' : '#ffffff') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'var(--text-primary)' : '#ffffff') : '#ffffff' }}
+                style={{ color: isProductsPage ? 'var(--text-primary)' : (isGrewCampaignPage ? (scrolled ? 'var(--text-primary)' : '#ffffff') : (scrolled ? 'var(--text-primary)' : '#ffffff')) }}
               >
                 <circle cx="12" cy="12" r="10" />
                 <line x1="2" y1="12" x2="22" y2="12" />
@@ -160,7 +151,7 @@ export default function Navbar() {
           className="hamburger"
           onClick={() => setIsOpen(!isOpen)}
           style={{
-            filter: isGrewCampaignPage ? (scrolled ? 'none' : 'brightness(0) invert(1)') : (scrolled || (isProductsPage && !scrolled)) ? (scrolled ? 'none' : 'brightness(0) invert(1)') : 'brightness(0) invert(1)'
+            filter: isProductsPage ? 'none' : (isGrewCampaignPage ? (scrolled ? 'none' : 'brightness(0) invert(1)') : (scrolled ? 'none' : 'brightness(0) invert(1)'))
           }}
         >
           <span></span>

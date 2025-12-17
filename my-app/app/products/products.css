@@ -296,4 +296,521 @@
         grid-template-columns: 1fr;
         gap: 0.5rem;
     }
+
+    /* Sogini Custom Mobile */
+    .sogini-layout {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sogini-image-wrapper {
+        min-height: 300px;
+    }
+
+    .sogini-right-panel {
+        padding: 3rem 1.5rem;
+    }
+
+    .sogini-title {
+        font-size: 2rem;
+    }
+}
+
+
+/* Sogini Custom Section Styles */
+.sogini-custom-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+.sogini-layout {
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.sogini-left-panel {
+    flex: 1;
+    position: relative;
+    background: #000;
+}
+
+.sogini-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.sogini-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sogini-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(2, 6, 23, 0.4) 100%);
+}
+
+.sogini-right-panel {
+    flex: 1;
+    background: #020617;
+    /* Very dark blue matching the image */
+    color: #fff;
+    padding: 4rem 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.sogini-content-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.sogini-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.sogini-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.sogini-feature-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sogini-feature-number {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sogini-feature-text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.sogini-feature-text p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.sogini-sub-text {
+    font-size: 0.9rem !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin-top: 0.2rem !important;
+}
+
+.sogini-cross {
+    color: #ff4d4d;
+    margin-left: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+.sogini-quote-box {
+    border-left: 3px solid #3b82f6;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.sogini-quote-box blockquote {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.sogini-quote-box .highlight {
+    color: #fff;
+    font-weight: 700;
+}
+
+.sogini-footer-text {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
+/* Sogini Innovation Section */
+.sogini-innovation {
+    padding: 6rem 0;
+    background: #020617;
+    /* Same dark background */
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sogini-innovation-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    color: #fff;
+}
+
+.sogini-innovation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.innovation-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.innovation-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.innovation-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.innovation-list li {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.innovation-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    /* Accent color */
+    font-size: 1.5rem;
+    line-height: 1.1;
+}
+
+.innovation-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.innovation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sogini-innovation-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.sogini-innovation-footer .highlight {
+    font-weight: 700;
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .sogini-innovation-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+/* Sogini Mechanism Section */
+.sogini-mechanism {
+    padding: 2rem 0 8rem;
+    background: #020617;
+    color: #fff;
+}
+
+.mechanism-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.mechanism-step {
+    width: 60%;
+    position: relative;
+    opacity: 0;
+    animation: slideInUp 0.6s ease forwards;
+}
+
+.mechanism-step.left {
+    align-self: flex-start;
+}
+
+.mechanism-step.right {
+    align-self: flex-end;
+    animation-delay: 0.2s;
+}
+
+.mechanism-step:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.mechanism-step:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.mechanism-visual {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.mechanism-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.mechanism-bar {
+    height: 30px;
+    background: linear-gradient(90deg, rgba(30, 58, 138, 0.8) 0%, rgba(30, 58, 138, 0.2) 100%);
+    border-radius: 15px;
+    flex: 1;
+    margin-left: -25px;
+    /* Pull behind icon */
+    padding-left: 35px;
+    /* Push content start */
+    z-index: 1;
+}
+
+.mechanism-content {
+    padding-left: 1rem;
+}
+
+.mechanism-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.mechanism-content p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.mechanism-info-box {
+    background: rgba(30, 58, 138, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.info-icon {
+    color: #3b82f6;
+    flex-shrink: 0;
+}
+
+.mechanism-info-box p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.mechanism-footer {
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mechanism-footer p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.mechanism-footer .highlight {
+    background: rgba(59, 130, 246, 0.3);
+    color: #60a5fa;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .mechanism-step {
+        width: 100%;
+        align-self: flex-start !important;
+    }
+}
+
+/* Sogini Benchmark Section */
+.sogini-benchmark {
+    position: relative;
+    background: #020617;
+    color: #fff;
+    padding-bottom: 8rem;
+}
+
+.benchmark-hero-image {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -100px;
+    /* Overlap effect */
+    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+}
+
+.benchmark-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.benchmark-content {
+    position: relative;
+    z-index: 2;
+}
+
+.benchmark-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4rem;
+    padding-left: 1rem;
+    border-left: 3px solid #3b82f6;
+}
+
+.benchmark-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.benchmark-card {
+    background: rgba(30, 41, 59, 0.6);
+    /* Translucent dark blue */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.benchmark-card:hover {
+    transform: translateY(-5px);
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.benchmark-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #60a5fa;
+    margin-bottom: 1.5rem;
+}
+
+.benchmark-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.benchmark-value {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.benchmark-value .highlight {
+    font-weight: 800;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.benchmark-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.benchmark-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 2rem;
+    background: rgba(2, 6, 23, 0.5);
+    border-radius: 12px;
+}
+
+.benchmark-footer p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
 }

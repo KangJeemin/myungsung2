@@ -62,7 +62,7 @@ export default function Navbar() {
       if (scrolled) {
         return {
           background: 'rgba(255, 255, 255, 0.98)',
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+          boxShadow: 'none',
           backdropFilter: 'blur(10px)'
         };
       } else {

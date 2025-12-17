@@ -1,12 +1,34 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './products.css';
 
 export default function ProductsPage() {
   const [activeTab, setActiveTab] = useState('sogini-ai');
+  const [isTabsVisible, setIsTabsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current) {
+        // Scroll Down
+        if (currentScrollY > 100) {
+          setIsTabsVisible(false);
+        }
+      } else {
+        // Scroll Up
+        setIsTabsVisible(true);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const products = {
     'sogini-ai': {
@@ -186,7 +208,7 @@ export default function ProductsPage() {
   return (
     <div className="products-page">
       <Navbar />
-      
+
       <main className="products-main">
         {/* 헤더 섹션 */}
         <section className="products-hero">
@@ -199,7 +221,7 @@ export default function ProductsPage() {
         </section>
 
         {/* 탭 메뉴 */}
-        <section className="products-tabs-section">
+        <section className={`products-tabs-section ${isTabsVisible ? '' : 'products-tabs-hidden'}`}>
           <div className="container">
             <div className="products-tabs">
               <button

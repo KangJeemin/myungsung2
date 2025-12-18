@@ -23,7 +23,7 @@ export default function HeroSection() {
           playsInline
           className="hero-video"
         >
-          <source src="/videos/generated_video.mp4" type="video/mp4" />
+          <source src="https://storage.googleapis.com/myeongseong-homepage-resource/videos/MyeongseongIntroduce.mp4" type="video/mp4" />
           {/* 비디오를 지원하지 않는 브라우저를 위한 대체 텍스트 */}
           Your browser does not support the video tag.
         </video>
@@ -31,12 +31,7 @@ export default function HeroSection() {
         <div className="hero-video-overlay"></div>
       </div>
 
-      <div className="hero-content">
-        <h1 className="hero-title">
-          <span className="fade-in">{t('hero.title1')}</span>
-          <span className="fade-in delay-1">{t('hero.title2')}</span>
-        </h1>
-      </div>
+
 
       {/* 네비게이션 버튼 */}
       <div className="hero-nav-buttons fade-in delay-2">

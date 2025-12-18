@@ -92,10 +92,14 @@ export default function Navbar() {
           <Link
             href="/"
             style={{
-              color: isProductsPage ? 'var(--primary-color)' : (isGrewCampaignPage ? (scrolled ? 'var(--primary-color)' : '#ffffff') : (scrolled ? 'var(--primary-color)' : '#ffffff'))
+              color: isProductsPage ? 'var(--text-primary)' : (isGrewCampaignPage ? (scrolled ? 'var(--text-primary)' : '#ffffff') : (scrolled ? 'var(--text-primary)' : '#ffffff')),
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
             }}
           >
-            Myeongseong
+            <img src="/favicon.ico" alt="Logo" style={{ width: '24px', height: '24px', borderRadius: '4px' }} />
+            (주)명성A&T
           </Link>
         </div>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>

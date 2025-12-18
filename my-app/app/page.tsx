@@ -4,6 +4,7 @@ import AboutSection from './components/AboutSection';
 import CustomerSection from './components/CustomerSection';
 import ServicesSection from './components/ServicesSection';
 import AiFeatureSection from './components/AiFeatureSection';
+import AiFeatureSection2 from './components/AiFeatureSection2';
 import StatsSection from './components/StatsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -23,6 +24,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AiFeatureSection />
+      <AiFeatureSection2 />
       <ServicesSection />
       <AboutSection />
       <CustomerSection />
